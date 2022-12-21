@@ -1,0 +1,2275 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title></title>
+                <meta name="robots" content="noindex" />
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="favicon.svg">
+                        <link rel="shortcut icon" href="favicon.png">
+                <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+                <link rel="stylesheet" href="css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="introducao.html"><strong aria-hidden="true">1.</strong> Introdução</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cap1/ola_mundo.html"><strong aria-hidden="true">1.1.</strong> Olá mundo!</a></li></ol></li><li class="chapter-item expanded "><a href="cap2/introducao.html"><strong aria-hidden="true">2.</strong> Conceitos básicos</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cap2/variaveis.html"><strong aria-hidden="true">2.1.</strong> Variáveis</a></li><li class="chapter-item expanded "><a href="cap2/instrucoes.html"><strong aria-hidden="true">2.2.</strong> Instruções</a></li><li class="chapter-item expanded "><a href="cap2/estruturas_de_controle.html"><strong aria-hidden="true">2.3.</strong> Estruturas de controle</a></li><li class="chapter-item expanded "><a href="cap2/funcoes.html"><strong aria-hidden="true">2.4.</strong> Funções</a></li><li class="chapter-item expanded "><a href="cap2/structs.html"><strong aria-hidden="true">2.5.</strong> Tipos definidos pelo usuário</a></li><li class="chapter-item expanded "><a href="cap2/referencias.html"><strong aria-hidden="true">2.6.</strong> Referências</a></li><li class="chapter-item expanded "><a href="cap2/ponteiros.html"><strong aria-hidden="true">2.7.</strong> Ponteiros e smart pointers</a></li><li class="chapter-item expanded "><a href="cap2/const.html"><strong aria-hidden="true">2.8.</strong> Const, constexpr e consteval</a></li><li class="chapter-item expanded "><a href="cap2/namespaces.html"><strong aria-hidden="true">2.9.</strong> Namespaces</a></li></ol></li><li class="chapter-item expanded "><a href="cap3/introducao.html"><strong aria-hidden="true">3.</strong> Visão geral sobre o processo de compilação</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cap3/preprocessamento.html"><strong aria-hidden="true">3.1.</strong> Preprocessamento</a></li><li class="chapter-item expanded "><a href="cap3/compilacao.html"><strong aria-hidden="true">3.2.</strong> Compilação</a></li><li class="chapter-item expanded "><a href="cap3/linkagem.html"><strong aria-hidden="true">3.3.</strong> Linkagem</a></li><li class="chapter-item expanded "><a href="cap3/pacotes.html"><strong aria-hidden="true">3.4.</strong> Gerenciamento de pacotes</a></li></ol></li><li class="chapter-item expanded "><a href="cap4/introducao.html"><strong aria-hidden="true">4.</strong> Introdução à biblioteca padrão do C++</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cap4/string.html"><strong aria-hidden="true">4.1.</strong> String</a></li><li class="chapter-item expanded "><a href="cap4/io.html"><strong aria-hidden="true">4.2.</strong> I/O (Entrada e saída)</a></li><li class="chapter-item expanded "><a href="cap4/array.html"><strong aria-hidden="true">4.3.</strong> Array</a></li><li class="chapter-item expanded "><a href="cap4/vector.html"><strong aria-hidden="true">4.4.</strong> Vector</a></li><li class="chapter-item expanded "><a href="cap4/map.html"><strong aria-hidden="true">4.5.</strong> Map</a></li><li class="chapter-item expanded "><a href="cap4/set.html"><strong aria-hidden="true">4.6.</strong> Set</a></li><li class="chapter-item expanded "><a href="cap4/functions.html"><strong aria-hidden="true">4.7.</strong> Function e lambdas</a></li><li class="chapter-item expanded "><a href="cap4/algoritmos.html"><strong aria-hidden="true">4.8.</strong> Algoritmos</a></li></ol></li><li class="chapter-item expanded "><a href="cap5/introducao.html"><strong aria-hidden="true">5.</strong> Programação orientada a objetos</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cap5/classes_e_objetos.html"><strong aria-hidden="true">5.1.</strong> Classes e objetos</a></li><li class="chapter-item expanded "><a href="cap5/heranca_e_polimorfismo.html"><strong aria-hidden="true">5.2.</strong> Herança e polimorfismo</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.3.</strong> Composição vs herança</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.4.</strong> Tratamento de erros e exceções</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.5.</strong> Sobrecarga de operadores</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.6.</strong> Gerenciamento de recursos e RAII</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> Bibliotecas de terceiros</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">6.1.</strong> Interface gráfica desktop com Qt</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.</strong> Teste automatizado de software com Catch2</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.3.</strong> Visualização 2D com SDL</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.4.</strong> Visualização 3D com OpenGL</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> Metaprogramação e templates</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">7.1.</strong> Templates</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.2.</strong> Metaprogramação estática</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.3.</strong> CRTP</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.4.</strong> SFINAE</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.5.</strong> PIMPL</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.</strong> Algoritmos e estruturas de dados</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">8.1.</strong> Busca</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.2.</strong> Recursão</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.3.</strong> Grafos</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> Programação paralela e concorrente</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">9.1.</strong> Threads</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.2.</strong> Async</div></li></ol></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                                                <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="a-linguagem-de-programação-c"><a class="header" href="#a-linguagem-de-programação-c">A Linguagem de Programação C++</a></h1>
+<h2 id="qual-o-objetivo-deste-livro"><a class="header" href="#qual-o-objetivo-deste-livro">Qual o objetivo deste livro?</a></h2>
+<p>Este livro virtual gratuito é uma iniciativa da comunidade C/C++ Brasil que pretende trazer uma fonte moderna, confiável e completa para o estudo de C++. Sendo um livro da comunidade, você leitor também pode contribuir com correções e melhorias. Basta participar da nossa comunidade do Telegram e abrir um pull request no <a href="https://github.com/tarcisiofischer/livrocpp">nosso repositório</a>. Toda ajuda é bem vinda! :)</p>
+<h2 id="o-que-é-c"><a class="header" href="#o-que-é-c">O que é C++?</a></h2>
+<p>C++ é uma linguagem de programação de propósito geral, compilada, estaticamente tipada, criada por Bjarne Stroustrup na década de 1980. A linguagem sofreu várias atualizações no decorrer dos anos, sendo C++20 a versão mais recente.</p>
+<h2 id="ferramentas-necessárias"><a class="header" href="#ferramentas-necessárias">Ferramentas necessárias</a></h2>
+<p>Apesar de este livro focar no ensino de C++ moderno, é necessário se preocupar com algumas questões técnicas relacionadas ao ferramental. A princípio, é possível utilizar qualquer editor de texto ou IDE (Integrated Development Environment - Ambiente Integrado de Desenvolvimento) para escrever os códigos. É necessário ter em mãos algum compilador para traduzir o código-fonte para código executável. Existem diferentes implementações de compiladores para C++. Na maior parte dos casos, não há distinção de uso entre os compiladores. Nos raros casos onde isso não é verdade, este livro deixará claro no texto as eventuais diferenças.</p>
+<p>Fica a cargo do leitor procurar e escolher as ferramentas de preferência para seguir com a leitura. Em ambiente Linux, os compiladores mais comuns são o GCC e o Clang. Em ambiente Windows, os compiladores mais comuns são o Microsoft Visual C++ e o Intel C++ Compiler.</p>
+<h2 id="onde-conseguir-ajuda"><a class="header" href="#onde-conseguir-ajuda">Onde conseguir ajuda</a></h2>
+<p>Somos uma comunidade aberta e ativa no Telegram com mais de 700 membros. Novos membros são bem vindos para discussões técnicas sobre C/C++, bibliotecas e ferramentas relacionadas. Temos também nossa <a href="https://github.com/cppbrasil/">organização no Github</a>, que conta com <a href="https://github.com/cppbrasil/material-de-aprendizado">um repositório</a> atualizado com fontes para material extra de aprendizado. Novos conteúdos são bem vindos, e podem ser sugeridos por meio de pull requests.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="capitulo-1-um-programa-simples-em-c"><a class="header" href="#capitulo-1-um-programa-simples-em-c">Capitulo 1: Um programa simples em C++</a></h1>
+<h2 id="olá-mundo-uma-versão-pragmática"><a class="header" href="#olá-mundo-uma-versão-pragmática">Olá mundo: Uma versão pragmática</a></h2>
+<p>O objetivo deste capítulo é introduzir vários conceitos básicos de programação C++ para iniciantes, ao mesmo tempo. Estes mesmos conceitos serão melhor elaborados mais pra frente. Iremos iniciar com o clássico código &quot;Olá mundo&quot;, que segue abaixo. Apesar de simples, esse código tem muito a ensinar, como veremos. Copie o código abaixo para um arquivo de nome <code>ola_mundo.cpp</code>, e salve em algum diretório do seu sistema.</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+
+int main()
+{
+   std::cout &lt;&lt; &quot;Olá Mundo!\n&quot;;
+   return 0;
+}
+</code></pre>
+<p>Em primeiro lugar, a diretiva <code>#include</code> é a forma de incluir em nosso código as declarações necessárias para utilizar código externo. Ao incluir o header <code>iostream</code>, temos acesso à função <code>cout</code>, dentro do namespace <code>std</code>, que serve para escrever dados na tela durante a execução do programa. Seguindo, encontramos a função <code>main</code>. Essa função define o ponto de partida de qualquer programa C++. Dentro da função <code>main</code>, encontramos a instrução <code>std::cout</code> seguida da mensagem &quot;Olá Mundo&quot;, que será mostrada na linha de comando. Por fim, temos o retorno da função main. É importante retornar o valor <code>0</code>, que significa, por convenção, que o programa terminou com sucesso.</p>
+<p>Para executar o programa, é preciso utilizar um programa chamado <em>compilador</em> (compiler), que executará um processo chamado <em>compilação</em> (compilation). Este processo é a tradução do código fonte para &quot;código de máquina&quot;. No caso do C++, é a tradução do código escrito na linguagem para código executável por nossos computadores. Tente modificar o programa, trocando a mensagem, removendo partes do código e recompilando, verificando os erros que acontecem. Não tenha medo de errar e nem de gerar erros de compilação. Acredite, eles vão acontecer mesmo quando você estiver usando a linguagem com fluência.</p>
+<p>Esta etapa é dependente do ambiente de trabalho que você está utilizando. Apenas para fins ilustrativos, os comandos abaixo mostram o processo de compilação em ambiente Linux, utilizando o GCC.</p>
+<pre><code class="language-sh">$ g++ -o ola_mundo ola_mundo.cpp
+$ ./ola_mundo
+Olá Mundo!
+</code></pre>
+<h2 id="olá-mundo-uma-versão-completa"><a class="header" href="#olá-mundo-uma-versão-completa">Olá mundo: Uma versão completa</a></h2>
+<p>Apesar do capítulo anterior ser suficiente para um primeiro contato com C++, talvez não fique claro outros aspectos ortogonais à linguagem, tais como escolhas de organização do código e do aspecto cultural do código. Desta forma, nosso primeiro projeto começa utilizando a linha de comando para instalar as ferramentas necessárias para a criação de um projeto. Os comandos aqui utilizados serão focados na <code>command line interface</code> (cli) do Unix. Caso você utilize Windows, o Mingw pode ser utilizado.</p>
+<h3 id="configurações-de-ambiente"><a class="header" href="#configurações-de-ambiente">Configurações de ambiente</a></h3>
+<p>Nesta parte serão abordados os programas necessários para ter um &quot;Olá mundo&quot; funcional. O primeiro programa que precisamos instalar é o <code>git</code> - um sistema de versionamento de código. Seu propósito é manter um registro facilmente acessável das alterações feitas em um projeto, de modo que não precisemos perder tempo no futuro buscando informação sobre o código em e-mails, Google Docs ou pendrives (por exemplo). Iniciaremos um repositório git na pasta de projetos e iremos criar um projeto em C++ utilizando o <strong>CMake</strong>.</p>
+<p>Se você utiliza:</p>
+<ul>
+<li>Mac
+<ul>
+<li>Instale o <code>XCode Command Line Tools</code></li>
+</ul>
+</li>
+<li>Windows
+<ul>
+<li>vá em <code>www.git-scm.com</code> e baixe o instalador para Windows</li>
+</ul>
+</li>
+<li>Linux / BSD
+<ul>
+<li>Utilize o gerenciador de pacotes da sua distribuição para instalar o git
+<ul>
+<li>Debian, Ubuntu e derivados: apt</li>
+<li>Fedora e derivados: dnf</li>
+<li>openSUSE e derivados: zypper</li>
+<li>Arch e derivados: pacman</li>
+<li>Outras: Verifique na documentação de sua distribuição como fazer a instalação</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Após ter o <code>git</code> instalado, precisamos abrir uma área para nosso projeto. Abra um terminal, ou prompt de comandos. No Linux você tem as opções de <code>konsole</code>, <code>gnome-terminal</code>, <code>xterm</code>, <code>urxvt</code> e muitos outros. No Windows o programa vem junto com a instalação do <code>git</code>. Já no Mac, o programa se chama <code>terminal</code>, mas você pode também instalar um substituto melhor chamado <code>iterm2</code>.</p>
+<p>Este livro segue a seguinte notação:</p>
+<ul>
+<li>Linhas iniciando por <code>$</code>: Usuário não-administrador</li>
+<li>Linhas iniciando por <code>#</code>: Usuário administrador</li>
+<li><code>~</code>: Pasta 'inicial' (home) do usuário</li>
+</ul>
+<p>Alguns comandos básicos para o terminal:</p>
+<ul>
+<li><code>pwd</code>: Retorna o caminho da pasta em que você está nesse momento</li>
+<li><code>cd</code>: Muda de pasta (&quot;Change Directory&quot;)</li>
+<li><code>mkdir</code>: Cria uma pasta (&quot;Make Directory&quot;)</li>
+<li><code>touch</code>: Cria um arquivo</li>
+<li><code>ls</code>: Lista os arquivos da pasta atual</li>
+<li><code>tree</code>: Exibe as pastas em forma de árvore</li>
+</ul>
+<p>Sugere-se criar uma pasta de projetos dentro da pasta inicial do seu usuário, conforme exemplo:</p>
+<pre><code class="language-sh">$ mkdir Projetos
+$ mkdir Projetos/OlaMundo
+$ cd Projetos/OlaMundo
+$ pwd
+/home/user/Projetos/OlaMundo
+</code></pre>
+<p>Utiliza-se o git para criar um novo repositório dentro da pasta recém-criada (veja abaixo). Você pode verificar a existência de uma nova pasta chamada <code>.git</code> utilizando o comando <code>ls</code>. As opções <code>-al</code> servem para exibir arquivos ocultos (<code>-a</code>) e para exibir os arquivo em uma lista vertical (<code>-l</code>).</p>
+<pre><code class="language-sh">$ pwd
+/home/user/Projetos/OlaMundo
+$ git init .
+Initialized empty Git repository in /home/user/Projetos/OlaMundo/.git/
+$ ls -al
+total 12
+drwxr-xr-x 3 user user 4096 Nov  9 16:53 .
+drwxr-xr-x 3 user user 4096 Nov  9 16:48 ..
+drwxr-xr-x 7 user user 4096 Nov  9 16:51 .git
+</code></pre>
+<p>Neste momento, é importante iniciar uma estrutura básica de projeto, com arquivos que não necessariamente compõem o código-fonte. Mesmo sendo um código exemplo, algumas padronizações são importantes em qualquer código para que outros programadores saibam por onde começar a olhar o seu projeto. Crie o arquivo <code>README.md</code> (o nome <code>README.md</code> é reconhecido por diversas ferramentas de gerenciamento de código). O formato <code>.md</code> significa <code>Markdown</code> e é um formato de texto puro que tem alguma informação sobre a formatação do conteúdo.</p>
+<pre><code class="language-sh">$ touch README.md
+$ ls -la
+total 12
+drwxr-xr-x 3 user user 4096 Nov  9 17:11 .
+drwxr-xr-x 3 user user 4096 Nov  9 16:48 ..
+drwxr-xr-x 7 user user 4096 Nov  9 17:01 .git
+-rw-r--r-- 1 user user    0 Nov  9 17:11 README.md
+</code></pre>
+<p>Utilize algum &quot;editor de texto pra programação&quot; pra escrever algo no arquivo criado. Evite editores como Microsoft Word, Microsoft Office, LibreOffice ou Wordpad, pois esses não são editores de texto cru, e portanto não trabalham normalmente com arquivos de texto simples. Também evite editores de texto simples demais, como o Notepad (Bloco de notas). Alguns editores sugeridos:</p>
+<ul>
+<li><a href="https://code.visualstudio.com">Visual Studio Code</a></li>
+<li><a href="https://www.atom.io">Atom</a></li>
+<li><a href="https://www.kate-editor.org">Kate</a></li>
+<li><a href="https://www.gnu.org/emacs">Emacs</a></li>
+<li><a href="https://www.vim.org">Vim</a></li>
+</ul>
+<p>O arquivo deve conter informações básicas do projeto, como seu titulo, uma breve descrição, autor, informações de como compilar o projeto, bibliotecas e ferramentas dependentes, e qualquer outras informações relevantes para outros desenvolvedores. Exemplo:</p>
+<pre><code class="language-markdown"># Projeto: Olá mundo
+
+Esse projeto serve como esboço do que é necessário para começar
+a trabalhar com C++ no mundo real.
+</code></pre>
+<p>o <code>#</code> cria uma linha de cabeçalho, que é o título do arquivo, e parágrafos são espaçados com uma linha em branco. Este livro está sendo escrito em markdown, e o resultado final é o que você está lendo! Adicione o arquivo ao seu repositório:</p>
+<pre><code class="language-sh">$ pwd
+/home/user/Projetos/OlaMundo
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+        README.md
+
+nothing added to commit but untracked files present (use &quot;git add&quot; to track)
+</code></pre>
+<p>Perceba a linha <code>Untracked files:</code>, essa é a lista de arquivos que o git ainda não está gerenciando. Precisamos adicionar o arquivo no índice de arquivos gerenciados pelo git:</p>
+<pre><code class="language-sh">$ pwd
+/home/user/Projetos/OlaMundo
+$ git add README.md
+
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use &quot;git rm --cached &lt;file&gt;...&quot; to unstage)
+        new file:   README.md
+</code></pre>
+<p>O comando executado não adicionou nada ao repositório, apenas adicionou o arquivo à <code>Staging Area</code>, que é a área onde os arquivos ficam preparados para serem adicionados em uma revisão. A seguir, commitamos o arquivo com uma mensagem descrevendo o que foi feito, da seguinte forma:</p>
+<pre><code class="language-sh">$ git commit -m &quot;Adicionado arquivo Readme.&quot;
+[master (root-commit) 478f2b6] Adicionado arquivo Readme.
+ 1 file changed, 6 insertions(+)
+ create mode 100644 README.md
+</code></pre>
+<p>A configuração do projeto pode ser feita utilizando o <code>CMake</code>. O <code>CMake</code> é um gerenciador padrão para projetos em C++, e serve para traduzir as informações do código-fonte, a sua organização em arquivos, e quais subprojetos você está fazendo dentro de seu código, para as ferramentas da linguagem - como <code>compiladores</code>, <code>depuradores</code> (debuggers), <code>IDEs</code>. Assim, prepare um arquivo chamado <code>CMakeLists.txt</code> juntamente com uma pasta chamada <code>src</code> (source), onde ficará o código-fonte do projeto.</p>
+<pre><code class="language-sh">$ pwd
+/home/user/Projetos/OlaMundo
+$ touch CMakeLists.txt
+$ mkdir src
+$ touch src/main.cpp
+$ touch src/CMakeLists.txt
+</code></pre>
+<p>O sistema de arquivos no momento é esse:</p>
+<pre><code class="language-text">.
+├── CMakeLists.txt
+├── README.md
+└── src
+    ├── CMakeLists.txt
+    └── main.cpp
+</code></pre>
+<p>Perceba que existem 2 arquivos <code>CMakeLists.txt</code>. O que está na pasta raiz do projeto irá definir as configurações de base, e irá adicionar a pasta <code>src</code> no projeto. O conteúdo do arquivo na pasta raiz deve ser conforme segue:</p>
+<pre><code class="language-cmake">cmake_minimum_required(VERSION 3.19)
+project(OlaMundo CXX)
+
+add_subdirectory(src)
+</code></pre>
+<p>Onde a primeira linha define a versão minima de CMake necessária para trabalhar com o projeto. A segunda linha especifica o nome do projeto para o CMake. A última linha adiciona a pasta <code>src</code> ao projeto. Nessa pasta, encontra-se outro arquivo <code>CMakeLists.txt</code>, contendo configurações de compilação.</p>
+<pre><code class="language-cmake">add_executable(HelloWorld)
+
+target_sources(
+    HelloWorld
+    PRIVATE
+        main.cpp
+)
+
+target_compile_features(
+    HelloWorld
+    PRIVATE
+        cxx_std_17
+)
+</code></pre>
+<p>O comando <code>add_executable</code> determina que esse projeto irá gerar um executável <code>HelloWorld</code>. Esse executável será gerado a partir da compilação dos arquivos determinados em <code>target_sources</code> (ou seja, o arquivo <code>main.cpp</code>). Por fim, <code>target_compile_features</code> especifica as &quot;features&quot; necessárias para produzir o executável. No exemplo, utiliza-se a versão C++17 para a compilação do projeto. Sugere-se verificar a tabela encontrada no <a href="https://en.cppreference.com/w/cpp/compiler_support">cppreference</a> para verificar as features disponíveis em cada versão do C++, para os compiladores mais comuns. Por fim, o conteúdo do arquivo <code>src/main.cpp</code> é mostrado abaixo.</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;cstdlib&gt;
+
+int main() {
+    std::cout &lt;&lt; &quot;Olá mundo!\n&quot;;
+    return EXIT_SUCCESS;
+}
+</code></pre>
+<p>A única diferenca deste código para milhares de códigos de outros livros é a adição do header <code>cstdlib</code> para o <code>EXIT_SUCCESS</code>. <code>cstdlib</code> possui <code>EXIT_SUCCESS</code> e <code>EXIT_FAILURE</code> para indicar quando algo deu errado ou não, e mesmo que não modifique o funcionamento do código (<code>EXIT_SUCCESS</code> é definido como <code>0</code>), é uma forma de explicitar o valor de retorno ao leitor.</p>
+<p>Para determinar como o CMake irá configurar nossos projetos, é sugerido criar uma configuração base. A partir da versão 3.19, o <code>CMake</code> possui um comando <code>--preset</code> que utiliza uma configuração predeterminada. Crie um arquivo chamado <code>CMakePresets.json</code>, na pasta raiz do projeto:</p>
+<pre><code class="language-json">{
+    &quot;version&quot;: 1,
+    &quot;cmakeMinimumRequired&quot;: {
+      &quot;major&quot;: 3,
+      &quot;minor&quot;: 19,
+      &quot;patch&quot;: 0
+    },
+    &quot;configurePresets&quot;: [
+        {
+            &quot;name&quot;: &quot;debug&quot;,
+            &quot;displayName&quot;: &quot;Compilacao Debug&quot;,
+            &quot;description&quot;: &quot;Compila em modo debug usando make&quot;,
+            &quot;generator&quot;: &quot;Unix Makefiles&quot;,
+            &quot;binaryDir&quot;: &quot;${sourceDir}/build/debug&quot;,
+            &quot;cacheVariables&quot;: {
+                &quot;CMAKE_BUILD_TYPE&quot;: &quot;Debug&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;release&quot;,
+            &quot;displayName&quot;: &quot;Compilacao Release&quot;,
+            &quot;description&quot;: &quot;Compila em modo release utilizando o Ninja&quot;,
+            &quot;generator&quot;: &quot;Ninja&quot;,
+            &quot;binaryDir&quot;: &quot;${sourceDir}/build/release&quot;,
+            &quot;cacheVariables&quot;: {
+                &quot;CMAKE_BUILD_TYPE&quot;: &quot;Release&quot;
+            }
+        }
+    ]
+}
+</code></pre>
+<p>Com essa configuração criamos dois geradores:</p>
+<ul>
+<li>Debug (Utilizando Unix Makefiles): A escolha do Unix Makefiles para o gerador de Debug é por ele ser sequencial, onde cada arquivo espera sua vez para ser compilado, facilitando a identificação de erros.</li>
+<li>Release (Utilizando Ninja): A escolha do Ninja para o gerador de Release possibilita uma compilação paralela, onde múltiplos arquivos são compilados ao mesmo tempo, tornando a compilação mais rápida.</li>
+</ul>
+<p>Por fim, para configurar o projeto utilizando o preset escolhido:</p>
+<pre><code class="language-sh">$ pwd
+/home/user/Projetos/OlaMundo
+$ ls
+CMakeLists.txt  CMakePresets.json  README.md  src
+$ cmake . --list-presets
+Available presets:
+
+  &quot;debug&quot;   - Compilacao Debug
+  &quot;release&quot; - Ninja
+
+$ cmake . --preset=debug
+Preset CMake variables:
+
+  CMAKE_BUILD_TYPE=&quot;Debug&quot;
+
+-- The C compiler identification is GNU 10.2.0
+-- The CXX compiler identification is GNU 10.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/user/Projetos/helloworld/build/debug
+</code></pre>
+<p>A última linha indica onde os arquivos de build do projeto foram gerados. Esta se refere à linha definida em <code>binaryDir</code> no arquivo de preset. Para compilar o programa, deve-se executar <code>cmake --build</code>. Por exemplo, para compilar o projeto em debug:</p>
+<pre><code class="language-sh">$ cmake --build ./build/debug
+Scanning dependencies of target HelloWorld
+[ 50%] Building CXX object src/CMakeFiles/HelloWorld.dir/main.cpp.o
+[100%] Linking CXX executable HelloWorld
+[100%] Built target HelloWorld
+</code></pre>
+<p>O objetivo desse capítulo foi dar uma longa introdução ao C++ considerando várias ferramentas comuns em ambiente de trabalho profissional. Para maiores detalhes em relação às ferramentas, sugere-se buscar as documentação das mesmas, pois a explicação detalhada de cada uma foge do escopo desse livro.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="conceitos-básicos"><a class="header" href="#conceitos-básicos">Conceitos Básicos</a></h1>
+<p>Esse capítulo traz uma sequência inicial e básica de conteúdos para começar a fazer programas em C++.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="variáveis"><a class="header" href="#variáveis">Variáveis</a></h1>
+<p>Uma variável é um meio de armazenar valores e atribuir nomes a eles; de modo mais técnico, variáveis são um espaço de memória no seu computador usado para guardar informações, que podem ser de vários <em>tipos</em>: números, caracteres, texto, entre outros. Graças a isso, diz-se que C++ é uma linguagem de programação <em>tipada</em>.</p>
+<p>Em C++, todas as variáveis possuem um tipo, e o tipo da variável <em>não muda</em>, até que ela deixe de existir (nos referimos a isso como o &quot;tempo de vida&quot;, ou &quot;<em>lifetime</em>&quot;, de uma variável). Diz-se então que C++ é uma linguagem de programação <em>estaticamente</em> tipada.</p>
+<p>Variáveis são definidas da seguinte forma:</p>
+<pre><code class="language-cpp">int main()
+{
+    int some_int = 8;
+    // A variávei de nome some_int é do tipo inteiro (int) e possui o valor 8
+    float some_float = 9.2;
+    // A variávei de nome some_float é do tipo ponto flutuante (float) e possui o valor 9.2
+    char some_char = 'a';
+    // A variávei de nome some_int é do tipo caractere (char) e possui o valor 'a'
+    bool some_bool = true;
+    // A variávei de nome some_int é do tipo booleano (bool) e possui o valor true
+
+    return 0;
+}
+</code></pre>
+<p>O tempo de vida de uma variável é delimitado por seu escopo. O escopo de uma variável é determinado pelo bloco que a contém, delimitado por chaves (<code>{}</code>). O exemplo anterior possui quatro variáveis, cada uma de um tipo diferente, e todas elas estão no escopo da função &quot;main&quot;. Uma variável chega ao fim do seu tempo de vida ao final do escopo que a contém. Se uma variável está fora de qualquer escopo, ela é chamada de <em>variável global</em>.</p>
+<p>Alternativamente, C++ moderno (do padrão C++11 em diante) traz uma sintaxe alternativa para definir o tipo das variáveis, por meio da palavra chave <code>auto</code>. Dessa forma, não é necessário explicitar o tipo das variáveis. Note que a variável ainda possui um tipo bem definido. A única diferença é que o tipo é determinado automaticamente em tempo de compilação (compile time), através de um processo chamado <em>inferência</em>:</p>
+<pre><code class="language-cpp">int main()
+{
+    auto some_int = 8;
+    auto some_float = 9.2;
+    auto some_char = 'a';
+    auto some_bool = true;
+}
+</code></pre>
+<p>Em C++, o tipo <code>string</code>, para representar textos, não é um tipo primitivo. Para isso, existe o tipo <code>std::string</code> na biblioteca padrão do C++ (<em>stdlib</em>). Para utilizá-lo, é necessário incluir o header <code>&lt;string&gt;</code>, da mesma forma que incluímos <code>&lt;iostream&gt;</code> anteriormente para podermos escrever na tela.</p>
+<pre><code class="language-cpp">#include &lt;string&gt;
+
+int main()
+{
+    std::string some_string = &quot;First string&quot;;
+    
+    // ... alternativamente, usando `auto`:
+    auto some_string_2 = std::string(&quot;Second string&quot;);
+
+    // ... ou, usando `auto` e `string literals`:
+    using namespace std::string_literals;
+    auto some_string_3 = &quot;Third string&quot;s; // Note o `s` após a string!
+}
+</code></pre>
+<p>Note que um <em>literal de texto</em> entre aspas duplas como <code>&quot;my string&quot;</code> não é do tipo <code>std::string</code>.
+Isto causa um pouco de confusão, e será melhor explicado adiante.
+Por ora, mantenha em mente as formas de declarar vistas acima (perceba o sufixo &quot;s&quot; no terceiro caso utilizando <code>auto</code>!)</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="instruções"><a class="header" href="#instruções">Instruções</a></h1>
+<p>Instruções em C++ são conceitos de <em>alto nível</em> (isto é, conceitos simples de serem entendidos por humanos) e servem para dividir a execução do código em etapas. Elas não devem ser confundidas com as instruções de um processador, que são de <em>baixo nível</em> (mais difícil de entender por humanos, porém fácil para uma máquina executar).</p>
+<p>Existem vários tipos de instruções, as mais comuns sendo as instruções de expressão (<em>expression statements</em>). Instruções de expressão, também chamadas expressões, são operações básicas como <code>x + 2</code>, <code>a + 5 * 3</code> e <code>pi = atan(i) * 4</code>, seguidas de um <code>;</code>. Ao declarar variáveis, nós utilizamos instruções de declaração (<em>declaration statements</em>), também chamadas declarações.</p>
+<h2 id="instruções-compostas"><a class="header" href="#instruções-compostas">Instruções compostas</a></h2>
+<p>Saber diferenciar todos os tipos de instrução é raramente necessário, mas as instruções compostas (<em>compound statements</em>) merecem atenção. Instruções compostas agrupam zero ou mais instruções em uma só.</p>
+<p>O corpo de uma <em>função</em> comum, que veremos mais adiante, é uma instrução composta contendo quatro instruç:</p>
+<pre><code class="language-c">int main()
+{ // Início da instrução composta
+    int x = 2;
+    int y = 3;
+    int z = x + y;
+
+    return 0;
+} // Fim da instrução composta
+</code></pre>
+<p>Você verá, mais pra frente, muitos outros casos em que há a necessidade de utilizar esse tipo de instrução.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="estruturas-de-controle"><a class="header" href="#estruturas-de-controle">Estruturas de controle</a></h1>
+<h2 id="a-estrutura-if--else-if--else"><a class="header" href="#a-estrutura-if--else-if--else">A estrutura &quot;<code>if</code>&quot; / &quot;<code>else if</code>&quot; / &quot;<code>else</code>&quot;</a></h2>
+<p>Estruturas de controle (control structures, control flow) são construções da linguagem que nos permitem fazer coisas mais complexas do que apenas executar instruções de maneira sequencial. A primeira que veremos é a estrutura <code>if</code>/<code>else if</code>/<code>else</code>. Ela nos permite tomar decisões e executar instruções diferentes dada uma ou mais condições. No exemplo abaixo, temos um programa simples que informa o preço que um cliente deve pagar em um cinema onde:</p>
+<ul>
+<li>Clientes abaixo de 10 anos de idade não pagam.</li>
+<li>Clientes acima de 50 anos pagam meia-entrada.</li>
+<li>Demais clientes pagam o valor normal da entrada.</li>
+</ul>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+
+int main()
+{
+   int age = 0;
+   double const price = 20.0;
+   std::cout &lt;&lt; &quot;Insira sua idade: &quot;;
+   std::cin &gt;&gt; age;
+
+   std::cout &lt;&lt; &quot;Sua idade é &quot; &lt;&lt; age &lt;&lt; '\n';
+
+   if (age &lt;= 10) {
+       std::cout &lt;&lt; &quot;Você não precisa pagar!\n&quot;;
+   } else if (age &gt; 50) {
+       std::cout &lt;&lt; &quot;Você paga apenas &quot; &lt;&lt; price/2 &lt;&lt; &quot;!\n&quot;;
+   } else {
+       std::cout &lt;&lt; &quot;Você paga &quot; &lt;&lt; price &lt;&lt; &quot;.\n&quot;;
+   }
+}
+</code></pre>
+<p>O exemplo acima introduz também uma forma de ler dados de entrada (input) providenciados pelo usuário. Note que a variável <code>age</code> é inicializada com o valor 0. Porém, a linha <code>std::cin &gt;&gt; age;</code> permite ao usuário que estiver executando o programa informar um novo valor para <code>age</code>. Desta forma, o valor de <code>age</code> que será utilizado pelo programa será conhecido apenas durante a execução.</p>
+<p>No exemplo, a linha 10 sempre será executada depois que o usuário informar o valor de <code>age</code>. Porém, a linha 13 será executada apenas se (<code>if</code>) a variável <code>age</code> tiver um valor abaixo de 10. A construção <code>else if</code> permite fazer um novo teste caso o teste anterior falhe, ou seja, a condição não seja verdadeira. Por outro lado, utilizar apenas <code>else</code> faz com que, caso nenhuma das condições anteriores tenha sido satisfeita, o código dentro do bloco seguinte execute garantidamente. Experimente alterar o valor de <code>age</code> para fazer com que o programa siga cada uma das possibilidades.</p>
+<h2 id="as-estruturas-while-e-for"><a class="header" href="#as-estruturas-while-e-for">As estruturas <code>while</code> e <code>for</code></a></h2>
+<p>As estruturas de controle <code>while</code> e <code>for</code> servem para repetir um bloco de código até que uma condição seja satisfeita. Este tipo específico de estrutura de controle se chama <em>laço</em> (loop). No exemplo abaixo, o programa pergunta se o usuário deseja aprender C++. Enquanto (<code>while</code>) a resposta não for <code>s</code> (sim) nem <code>n</code> (não), a mesma pergunta aparecerá para o usuário. Uma vez que o usuário der uma resposta válida, um <code>if</code> imprime a reação correspondente à resposta do usuário.</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+
+int main()
+{
+   char answer = '\0';
+
+   while (answer != 's' &amp;&amp; answer != 'n') {
+       std::cout &lt;&lt; &quot;Você deseja aprender C++? [s/n]: &quot;;
+       std::cin &gt;&gt; answer;
+   }
+
+   if (answer == 's') {
+       std::cout &lt;&lt; &quot;Esse é o espírito!\n&quot;;
+   } else {
+       std::cout &lt;&lt; &quot;Que triste...\n&quot;;
+   }
+}
+</code></pre>
+<p>Em geral, usamos o laço <code>while</code> quando não existe uma definição clara de quantas vezes precisamos rodar o laço, apenas uma condição de continuidade que deve em algum momento posterior tornar-se falsa.</p>
+<p>O laço <code>for</code> adiciona legibilidade ao código quando temos uma inicialização e um passo que deve ser executado em toda iteração do laço. Tudo que é feito com um laço <code>for</code> pode também ser feito com um laço <code>while</code>, e vice versa. A diferença entre eles é que, em alguns casos, a leitura do código fica mais natural com um ou com outro. Ao contrário do <code>while</code>, o <code>for</code> se presta mais quando sabemos exatamente quantas vezes precisamos repetir as operações. No código abaixo, o laço <code>for</code> itera com valores de <code>i = a</code> até valor de <code>i = b</code>, somando 1 ao valor de <code>i</code> a cada iteração. Uma forma alternativa e mais compacta de escrever <code>i = i + 1</code> seria escrever <code>++i</code>.</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+
+int main()
+{
+   int a = 0;
+   int b = 0;
+
+   std::cout &lt;&lt; &quot;Digite o valor de A: &quot;;
+   std::cin &gt;&gt; a;
+
+   std::cout &lt;&lt; &quot;Digite o valor de B: &quot;;
+   std::cin &gt;&gt; b;
+
+   int sum = 0;
+
+   for (int i = a; i &lt;= b; i = i + 1) {
+       sum += i;
+   }
+
+   std::cout &lt;&lt; &quot;Sum [&quot; &lt;&lt; a &lt;&lt; &quot;, &quot; &lt;&lt; b &lt;&lt; &quot;] = &quot; &lt;&lt; sum &lt;&lt; std::endl;
+
+   return 0;
+}
+</code></pre>
+<h3 id="as-instruções-continue-e-break"><a class="header" href="#as-instruções-continue-e-break">As instruções <code>continue</code> e <code>break</code></a></h3>
+<p>Quando utilizamos um laço, é possível que queiramos interrompê-lo prematuramente. Para isso existe a instrução <code>break</code>:</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+
+int main()
+{
+    for (int i = 1; i &lt;= 100; i = i + 1) {
+        std::cout &lt;&lt; &quot;Iteração #&quot; &lt;&lt; i &lt;&lt; '\n'
+                  &lt;&lt; &quot;Você deseja continuar? [s/n]: &quot;;
+
+        char op;
+        std::cin &gt;&gt; op;
+        if (op == 'n')
+            break;
+        
+        std::cout &lt;&lt; &quot;Incrementando i...&quot; &lt;&lt; std::endl;
+    }
+
+    return 0;
+}
+</code></pre>
+<p>Assim que a execução do programa atinge a instrução <code>break</code>, o laço é imediatamente interrompido; o <code>i</code> deixa de ser incrementado e vamos direto para nosso <code>return</code>.</p>
+<p>Caso queiramos interromper a execução do corpo (a instrução composta, delimitada por chaves) de nosso laço mas continuar iterando, devemos utilizar a instrução <code>continue</code>:</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+
+int main()
+{
+    for (int i = 1; i &lt;= 100; i = i + 1) {
+        std::cout &lt;&lt; &quot;Iteração #&quot; &lt;&lt; i &lt;&lt; '\n'
+                  &lt;&lt; &quot;Você deseja pular essa iteração? [s/n]: &quot;;
+
+        char op;
+        std::cin &gt;&gt; op;
+        if (op == 's')
+            continue;
+        
+        std::cout &lt;&lt; &quot;Executando o resto do corpo do laço&quot; &lt;&lt; std::endl;
+    }
+
+    return 0;
+}
+</code></pre>
+<p>Perceba que, como <code>i = i + 1</code> não faz parte do corpo do laço, ele é executado independentemente do <code>continue</code>. Lembre-se que isso não se aplica ao <code>break</code>.</p>
+<p>É possível que você não veja vantagens imediatas no uso dessas duas instruções, mas elas podem simplificar o código e às vezes são até necessárias.</p>
+<h2 id="devo-utilizar--e-"><a class="header" href="#devo-utilizar--e-">Devo utilizar <code>{</code> e <code>}</code>?</a></h2>
+<p>Você pode ter percebido que o corpo das instruções <code>if</code> (e suas partes <code>else</code>), <code>for</code> e <code>while</code> podem ser tanto uma instrução simples quanto uma instrução composta. Quando estas estruturas de controle consistem apenas de uma instrução, não é obrigatório utilizar chaves. Por exemplo, os dois <code>if</code> seguintes são equivalentes:</p>
+<pre><code class="language-cpp">if (a) {
+    b = 5;
+}
+
+if (a)
+    b = 5;
+</code></pre>
+<p>Agora, quando precisamos de mais de uma instrução, precisamos agrupá-las como uma só:</p>
+<pre><code class="language-cpp">if (a) {
+    b = 5;
+    c = 6;
+} // Ok! Ambas as atribuições fazem parte do if
+
+if (a)
+    b = 5;
+    c = 6; // Ops! Essa instrução não faz parte do if 
+</code></pre>
+<p>Alguns programadores optam por utilizar sempre instruções compostas para evitar surpresas. Há bons argumentos tanto a favor quanto contra isso, portanto ao trabalhar em um projeto preexistente siga o padrão de estilo que já esteja sendo utilizado.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="funções"><a class="header" href="#funções">Funções</a></h1>
+<p>Para deixar partes do programa reutilizáveis, e para adicionar legibilidade ao código, utilizamos funções. Funções são pedaços de código que são definidas uma vez em um lugar, mas que podem ser reutilizadas quantas vezes quiser em outros lugares do código.</p>
+<p>Elas servem para que não precisemos reescrever o mesmo código múltiplas vezes, e permitem que sigamos o princípio do <em>Não Se Repita</em> (<a href="https://pt.wikipedia.org/wiki/Don%27t_repeat_yourself">Don't repeat yourself</a> - DRY).</p>
+<p>Funções podem ou não receber <em>parâmetros</em>, que são usados para levar informações de um escopo para outro. Os parâmetros são, por padrão, cópias das variáveis que são levadas ao escopo da função invocada, e eles aparecem entre parênteses após o nome da função, separados por vírgula.</p>
+<p>Funções possuem também um valor de retorno, que possibilita capturar uma variável concebida dentro do escopo da função para o local onde ela foi chamada. Abaixo um exemplo de função:</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+
+int calculate_sum(int a, int b)
+{
+   int sum = 0;
+   for (int i = a; i &lt;= b; ++i) {
+       sum += i;
+   }
+   return sum;
+}
+
+int main()
+{
+   int a = 0;
+   int b = 0;
+   std::cout &lt;&lt; &quot;Digite o valor de A: &quot;;
+   std::cin &gt;&gt; a;
+   std::cout &lt;&lt; &quot;Digite o valor de B: &quot;;
+   std::cin &gt;&gt; b;
+
+   std::cout &lt;&lt; &quot;Sum [&quot; &lt;&lt; a &lt;&lt; &quot;, &quot; &lt;&lt; b &lt;&lt; &quot;] = &quot; &lt;&lt; calculate_sum(a, b) &lt;&lt; std::endl;
+
+   return 0;
+}
+</code></pre>
+<p>No código acima, foi definida uma função <code>calculate_sum</code>, que necessita de dois parâmetros do tipo int <code>a</code> e <code>b</code>, e que efetua a soma dos valores de <code>a</code> a <code>b</code>, e retorna essa soma (por exemplo, se <code>a</code> for 2 e <code>b</code> for 5, a soma será 2 + 3 + 4 + 5, e o valor retornado será 14). O tipo de retorno de uma função é determinado em sua <em>assinatura</em>. A assinatura de uma função é o conjunto contendo seu nome, seu tipo e seus parâmetros, por exemplo, <code>int calculate_sum(int a, int b)</code>.</p>
+<p>As funções devem ser pelo menos <em>declaradas</em> antes de serem utilizadas. Por exemplo, se movermos a definição da função <code>calculate_sum</code> para baixo da função <code>main</code>, teriamos um erro de compilação. Existe uma distinção entre <em>declarar</em> uma função e <em>definir</em> uma função. Declarar uma função é apenas mostrar que ela existe, sem determinar seu funcionamento (ou seja, sem adicionar o corpo de código dela). Definir uma função é adicionar um corpo de código a uma declaração.</p>
+<p>No exemplo acima, estamos definindo a função <code>calculate_sum</code>. Um exemplo de separação entre a declaração e a definição de função é mostrado abaixo.</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+
+// Declaração da função `calculate_sum`
+int calculate_sum(int a, int b);
+
+int main()
+{
+   int a = 0;
+   int b = 0;
+   std::cout &lt;&lt; &quot;Digite o valor de A: &quot;;
+   std::cin &gt;&gt; a;
+   std::cout &lt;&lt; &quot;Digite o valor de B: &quot;;
+   std::cin &gt;&gt; b;
+
+   std::cout &lt;&lt; &quot;Sum [&quot; &lt;&lt; a &lt;&lt; &quot;, &quot; &lt;&lt; b &lt;&lt; &quot;] = &quot; &lt;&lt; calculate_sum(a, b) &lt;&lt; std::endl;
+
+   return 0;
+}
+
+// Definição da função `calculate_sum`
+int calculate_sum(int a, int b)
+{
+   int sum = 0;
+   for (int i = a; i &lt;= b; ++i) {
+       sum += i;
+   }
+   return sum;
+}
+</code></pre>
+<p>Caso a função não retorne nenhum valor, é possível utilizar a palavra reservada <code>void</code>, conforme exemplo abaixo. Funções com tipo de retorno <code>void</code> podem (opcionalmente) omitir a chamada <code>return</code>, indicando o término da função. Enquanto funções com retornos específicos são particularmente úteis para obter o resultado de uma operação para que façamos algo com ele, funções do tipo <code>void</code> são particularmente úteis para executar uma ação. No exemplo anterior, queríamos obter um resultado, um número que representa uma soma, e fizemos algo mais com ele em <code>main()</code>. No exemplo seguinte, a única ação sendo executada é printar na tela o texto &quot;Olá Mundo!&quot;, e não queremos fazer nenhuma operação com este texto depois que a função é executada.</p>
+<pre><code class="language-cpp">void say_hello()
+{
+   std::cout &lt;&lt; &quot;Olá Mundo!&quot; &lt;&lt; std::endl;
+
+   // Opcional:
+   // return
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="tipos-definidos-pelo-usuário"><a class="header" href="#tipos-definidos-pelo-usuário">Tipos definidos pelo usuário</a></h1>
+<p>Structs (estruturas) são uma forma de adicionar tipos novos ao programa (user-defined types). Eles fornecem mais semântica a grupos de variáveis que se relacionam de alguma forma, agrupando múltiplas <em>propriedades</em> para que sejam usadas de uma vez.</p>
+<p>No exemplo abaixo, uma estrutura de nome <code>Point</code> é definida entre as linhas 4 e 7. Ela possui dois membros: <code>x</code> e <code>y</code>, ambos do tipo primitivo <code>double</code>. Essas linhas definem um novo tipo de dado de nome <code>Point</code>, que pode ser utilizado em qualquer lugar do programa. As linhas 16 e 17 criam duas <strong>instâncias</strong> de duas variáveis com o novo tipo <code>Point</code>.</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;cmath&gt;
+
+struct Point {
+   double x;
+   double y;
+};
+
+double calculate_distance(Point p1, Point p2)
+{
+   return sqrt(pow(p1.x - p2.x, 2) + pow(p1.y - p2.y, 2));
+}
+
+int main()
+{
+   Point p1{1.1, 2.7};
+   Point p2{3.7, 4.4};
+
+   std::cout &lt;&lt; &quot;A distância entre os pontos p1 e p2 é &quot; &lt;&lt; calculate_distance(p1, p2) &lt;&lt; std::endl;
+
+   return 0;
+}
+</code></pre>
+<p>Assim como qualquer outro tipo de variável, é possível utilizar o tipo <code>Point</code> como parâmetro para funções, como é o caso do exemplo acima, na linha 9.
+A função <code>calculate_distance</code> necessita de dois parâmetros, <code>p1</code> e <code>p2</code>, ambos do tipo <code>Point</code> para ser invocada. Note que, ao invocar a função na linha 19, as duas variáveis <code>p1</code> e <code>p2</code> são copiadas para o escopo da função <code>calculate_distance</code>. Ou seja, se alterarmos os valores de <code>p1</code> e <code>p2</code> dentro do corpo da função <code>calculate_distance</code>, os valores de <code>p1</code> e <code>p2</code> presentes no escopo da função <code>main</code> não serão alteradas.</p>
+<p>Note que, por <code>Point</code> ser um tipo como qualquer outro, é possível compor estruturas aninhadas. Por exemplo, considere o seguinte problema:
+Você está desenvolvendo um jogo de plataforma, e precisa representar o personagem em um espaço bidimensional. O personagem possui uma
+posição e um número de vidas. Utilizando a estrutura anterior para representar a posição, poderia-se escrever:</p>
+<pre><code class="language-cpp">using Life = unsigned int;
+
+struct Player {
+    Point position;
+    Life life;
+};
+</code></pre>
+<p>Como exemplo ilustrativo, utiliza-se aqui a palavra reservada <code>using</code> para criar um <code>type alias</code> (um &quot;apelido&quot; para um tipo qualquer).
+Basicamente, dá-se um novo nome para um tipo que já existe. No exemplo acima, <code>Life</code> será equivalente ao tipo <code>unsigned int</code>, ou seja, um inteiro não negativo. Deste modo, toda vez que usarmos o tipo <code>Life</code>, estaremos criando, por trás dos panos, um <code>unsigned int</code>.</p>
+<p>Outro modo de criarmos tipos definidos pelo usuário é por meio de <em>classes</em>, que veremos mais à frente.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="referências"><a class="header" href="#referências">Referências</a></h1>
+<p>Referências permitem criar &quot;apelidos&quot; para variáveis, isto é, uma referência para uma variável acessa o valor daquela variável, nomeada de outra forma. Considere o código abaixo, onde é criada uma referência de nome <code>b</code> para uma variável de nome <code>a</code>. Utiliza-se o simbolo <code>&amp;</code> junto ao tipo da variável para declarar uma referência. Diferente de uma variável &quot;comum&quot;, alterar o valor da referência altera o valor da variável referenciada. Portanto, no exemplo abaixo, o resultado vai ser a mensagem <code>a = 7, b = 7</code>.</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+
+int main()
+{
+    int a = 1;
+    int&amp; b = a;
+    // Já que a variável 'b' se refere a 'a',
+    b = 7;
+    // então atribuir '7' para 'b' significa atribuir '7' para 'a'.
+    std::cout &lt;&lt; &quot;a = &quot; &lt;&lt; a &lt;&lt; &quot;, b = &quot; &lt;&lt; b &lt;&lt; std::endl;
+
+    return 0;
+}
+</code></pre>
+<p>Como uma referência é um &quot;apelido&quot; para outra variável, é impossível criar uma referência para um valor. Por exemplo, <code>int&amp; b = 9;</code> não faz sentido, e ocasiona em um erro de compilação.</p>
+<p>É possível usar referências também na passagem de parâmetros de funções. Quando não são utilizadas referências nos parâmetros de uma função, as variáveis são copiadas para o escopo da função. Referências passadas por parâmetro e modificadas dentro do escopo de uma função alteram o valor da variável original de onde foi chamada, como mostra o exemplo abaixo.</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+
+void wont_change_data(int a)
+{
+    a = 1;
+}
+
+void will_change_data(int&amp; a)
+{
+    a = 1;
+}
+
+int main()
+{
+    int my_a = 8;
+    std::cout &lt;&lt; my_a &lt;&lt; std::endl;
+    // Saída: 8
+    wont_change_data(my_a);
+    std::cout &lt;&lt; my_a &lt;&lt; std::endl;
+    // Saída: 8
+    will_change_data(my_a);
+    std::cout &lt;&lt; my_a &lt;&lt; std::endl;
+    // Saída: 1
+}
+</code></pre>
+<p>Outro exemplo pode observado no código abaixo. Imagine que <code>Matrix</code> é uma estrutura de dados que representa uma matriz 100x100. A função <code>sum_elements</code> soma todos os elementos dessa matriz.</p>
+<p>O loop na função <code>main</code> foi criado sinteticamente para representar muitas chamadas da função <code>sum_elements</code>. Para cada invocação da função <code>sum_elements</code>, uma instância da estrutura de dados <code>Matrix</code> é copiada para o contexto da função, apenas para somar o valor de cada um de seus elementos.</p>
+<pre><code class="language-cpp">/**
+ * Soma dos elementos de uma matriz 100x100
+ * :param Matrix matrix:
+ * :returns double:
+ */
+double sum_elements(Matrix matrix)
+{
+    double sum = 0.;
+    for (int i = 0; i &lt; 100; ++i) {
+        for (int j = 0; j &lt; 100; ++j) {
+            sum += matrix[i][j];
+        }
+    }
+    return sum;
+}
+
+int main()
+{
+    // ...
+    double total_sum = 0.;
+    for (int i = 0; i &lt; 1000000; ++i) {
+        total_sum += sum_elements(matrix);
+    }
+    std::cout &lt;&lt; &quot;Total Sum = &quot; &lt;&lt; total_sum &lt;&lt; std::endl;
+
+    return 0;
+}
+</code></pre>
+<p>Uma forma de evitar a cópia dessa estrutura de dados é utilizando uma referência para uma <code>Matrix</code>, ou seja, trocando a assinatura da função para <code>double sum_elements(Matrix&amp; matrix)</code>. Apesar de resolver o problema das cópias desnecessárias, a solução mencionada não é ideal, pois passando uma referência à estrutura <code>Matrix</code>, os dados da estrutura podem ser modificados dentro do escopo da função.</p>
+<p>Normalmente, é interessante evitar funções com esse tipo de &quot;efeito colateral&quot; (&quot;side effects&quot;), pois à medida que o projeto cresce, isso pode gerar um problema de manutenibilidade. Para ter noção do quanto essas cópias fazem diferença nesse caso, considere a comparação abaixo, extraída a partir de benchmark feito no site <a href="https://quick-bench.com/">Quick Bench</a>.</p>
+<p><img src="cap2/./images/benchmark-ref.png" alt="Benchmark" /></p>
+<p>Existem sim alguns programas que usam referências como parâmetros de funções e modificam seus dados. Não há problemas em fazer isso, desde que seja bem documentado ou seja óbvio ao leitor. Por exemplo, no caso acima, não é esperado que uma função de nome <code>sum_elements</code> altere os elemento da matriz, porém uma função chamada <code>void sum_one_to_all_elements_in(Matrix&amp; m)</code> deixa mais claro que todos os elementos da matriz serão alterados.</p>
+<p>Uma alternativa para evitar o problema comentado é o uso do modificador <code>const</code>, que faz com que a &quot;variável&quot; em questão seja constante, ou seja, não possa ser alterada durante a execução do programa. Antes de partir para seu uso no caso da função <code>sum_elements</code>, considere o uso de <code>const</code> em um exemplo mais simples:</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+
+int main()
+{
+   double const a = 8;
+   a = 9; // Erro de compilação
+}
+</code></pre>
+<p>O código acima não irá compilar. Isso porque a variável &quot;a&quot; é uma constante, ou seja, não se pode alterar seu valor, como se está tentando fazer na linha 6. Casos comuns de uso de <code>const</code> são, por exemplo, as variáveis matemáticas <code>PI</code> e <code>e</code>. O modificador <code>const</code> pode também ser utilizado em conjunto com referências, criando-se referências constantes, ou seja, não é possível alterar o valor da variável referenciada.</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+
+int main()
+{
+   double a = 8;
+   double const&amp; b = a;
+   a = 9; // OK. `a` não é `const`. (b também assume o valor `9`)
+   b = 7; // Erro de compilação: `b` é uma referência const
+}
+</code></pre>
+<p>O código acima não irá compilar. O motivo é que não se pode alterar o valor de &quot;a&quot; por meio da referência &quot;b&quot;, pois ela é uma referência <code>const</code>. Um detalhe importante a se comentar é que o modificador <code>const</code> se aplica sempre ao tipo à sua esquerda. Se não houver nada à esquerda, ele se aplica ao tipo à direita. Dessa forma temos:</p>
+<ul>
+<li><code>double const&amp; my_data</code>: Cria uma referência para um <code>const double</code></li>
+<li><code>const double&amp; my_data</code>: Cria uma referência para um <code>const double</code> (Igual à anterior)</li>
+<li><code>double &amp;const my_data</code>: Erro de compilação, pois não faz sentido ter uma &quot;referência const&quot;, visto que referências não são modificáveis</li>
+</ul>
+<p>Por fim, voltando ao problema da matriz, quando escrevemos <code>double sum_elements(Matrix&amp; matrix)</code>, evitamos que a matriz seja copiada, e isso é um ponto positivo, em termos de performance. Porém, introduzimos um possível problema: se a matriz for modificada dentro do escopo da função <code>sum_elements</code>, então a matriz do escopo da função <code>main</code> também será modificada.</p>
+<p>Por convenção, não esperamos que ninguém vá de fato modificar os elementos da matriz naquela função. É possível garantir isso utilizando <code>const&amp;</code>, isto é, se alguém por engano alterar a variável <code>matrix</code> de dentro da função <code>sum_elements</code>, um erro de compilação ocorrerá. A assinatura da função fica da seguinte forma: <code>double sum_elements(Matrix const&amp; matrix)</code>, e nenhuma outra modificação é necessária.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ponteiros-e-smart-pointers"><a class="header" href="#ponteiros-e-smart-pointers">Ponteiros e smart pointers</a></h1>
+<p>Quando definimos uma variável em um programa C++, ela é alocada em uma posição de memória do computador. Um &quot;endereço&quot; é a localização em memória virtual de uma variável.</p>
+<p>Apenas para fins ilustrativos, imagine que toda a memória do seu computador é uma grande tabela. Cada item da tabela possui um endereço e um valor, como no exemplo abaixo. O código de exemplo captura o endereço da variável <code>a</code> e o coloca como valor da variável <code>b</code>: A linha 6 cria a variável <code>b</code>, do tipo <code>int*</code>, e inicializa essa variável com o endereço de memória da variável <code>a</code>.</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+ 
+int main()
+{
+   int a = 1;
+   int* b = &amp;a;
+ 
+   std::cout &lt;&lt; b &lt;&lt; std::endl;
+ 
+   return 0;
+}
+</code></pre>
+<pre><code>| Endereço  | Valor     | Variável associada |
+|---        |---        |---                 |
+| 0x7ff0    | 1         | a                  |
+| 0x7ff4    | 0x7ff0 	| b                  |
+</code></pre>
+<p>Os endereços na tabela estão em hexadecimal, pois é a forma comum de representar endereços de memória. São valores meramente ilustrativos, de forma que, caso você execute o programa no seu computador, irá ter resultados diferentes.</p>
+<p>Apesar do uso do mesmo simbolo (<code>&amp;</code>), nesse caso <code>&amp;a</code> não é uma referência. Essa distinção é importante: Caso <code>&amp;</code> esteja ao lado de um tipo (<code>int</code>, <code>double</code>, <code>Point</code>, etc...) tem-se uma referência. Por outro lado, caso <code>&amp;</code> esteja ao lado do nome de uma variável (como no caso acima), lê-se &quot;endereço de...&quot; (no exemplo, &quot;endereço de <code>a</code>&quot;).</p>
+<p>O operador <code>*</code> aplicado a uma variável cujo tipo é um ponteiro, retorna o valor apontado por aquela variável, da seguinte forma:</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+ 
+int main()
+{
+   int a = 1;
+   int* b = &amp;a;
+   *b = 9;
+   std::cout &lt;&lt; a &lt;&lt; std::endl;
+   // Saída: 9
+   std::cout &lt;&lt; b &lt;&lt; std::endl;
+   // Saída: um endereço de memória (como 0x7ffcf973efb8 por exemplo)
+   std::cout &lt;&lt; *b &lt;&lt; std::endl;
+   // Saída: 9
+   return 0;
+}
+</code></pre>
+<p>As variáveis criadas até agora nos exemplos desse livro são todas criadas numa região de memória denominada <strong>stack</strong>. O gerenciamento dessa memória é feito automaticamente, ou seja, as variáveis são criadas e alocadas na região da stack ao entrar em determinado escopo e, ao sair do mesmo, as variáveis são automaticamente removidas.</p>
+<p>Outra forma de alocar memória é por meio das funções <code>malloc</code> e <code>new</code>. No geral, <code>malloc</code> é o jeito antigo de gerenciar memória, herdado do C. Em C++, sugere-se sempre utilizar <code>new</code> para alocação dinâmica de memória, ao invés de <code>malloc</code>, pois para instâncias de classes o <code>new</code> chama o construtor, fazendo a inicialização da variável, como será visto em capitulos posteriores.</p>
+<p>Variáveis alocadas com <code>new</code> e <code>malloc</code> são colocadas em uma região de memória denominada <strong>heap</strong>. Diferente da stack, essas variáveis não são removidas automaticamente ao saírem do escopo corrente. O gerenciamento do tempo de vida desse tipo de variável deve ser feito pelo programador. O programador deve devolver a memória ao sistema operacional após término de uso da variável por meio da função <code>delete</code>, como no exemplo abaixo:</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+ 
+int main()
+{
+   int* a = new int(3);
+   std::cout &lt;&lt; &quot;a = &quot; &lt;&lt; *a &lt;&lt; std::endl;
+   delete a;
+ 
+   return 0;
+}
+</code></pre>
+<p>A linha 5 faz a alocação dinâmica de uma variável do tipo int, inicializada com valor 3, e atribui o endereço dessa variável alocada para a variável <code>a</code> de tipo <code>int*</code>. A linha 6 mostra o valor apontado por <code>a</code>. A linha 7 deleta (devolve) a memória alocada na linha 5. Não deve-se utilizar uma variável depois que foi deletada. No caso de sistemas operacionais de propósito geral, como Windows e Linux, toda a memória alocada que não foi deletada é automaticamente devolvida no momento que o programa termina.</p>
+<p>Gerenciar memória da heap não é um problema trivial. O mau gerenciamento da memória pode ocasionar em uma excessiva utilização da memória RAM, como é o caso dos vazamentos de memória (<strong>memory leaks</strong>), que é quando o programador &quot;esquece&quot; de devolver a memória.</p>
+<p>Smart pointers são estruturas de dados que auxiliam no gerenciamento de dados alocados na heap. Basicamente, a estrutura aloca a variável na heap e, ao não ser mais utilizada, a remove automaticamente. De um modo geral, é boa prática de C++ utilizar smart pointers em abundância.</p>
+<p>O exemplo abaixo é trivial, e apenas mostra o funcionamento da infraestrutura, mas não consegue captar por completo o valor de usar smart pointers. O uso de ponteiros e alocação dinâmica é especialmente relevante nos casos de interfaceamento com bibliotecas de baixo nível (por exemplo, funções C), ou no caso de uso de polimorfismo em programação orientada a objetos em C++, tema que será discutido posteriormente nesse livro.</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;memory&gt;
+
+int main()
+{
+   auto a = std::make_unique&lt;int&gt;(7);
+ 
+   std::cout &lt;&lt; &quot;a = &quot; &lt;&lt; *a &lt;&lt; std::endl;
+
+   // A variável `a` será deletada automaticamente quando o escopo terminar
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="const-constexpr-e-consteval"><a class="header" href="#const-constexpr-e-consteval">const, constexpr e consteval</a></h1>
+<p>Conforme apresentado no capítulo 2.6, o modificador <code>const</code> pode ser utilizado para criar constantes (variáveis com acesso apenas de leitura). Alterar uma variável que contém o modificador <code>const</code> causa um erro de compilação:</p>
+<pre><code class="language-cpp">int main()
+{
+    const int i = 10;
+    i = 11; // Erro de compilação: Atribuição à uma variável somente-leitura
+    return 0;
+}
+</code></pre>
+<p>Este capítulo apresenta a diferença entre os modificadores <code>const</code>, <code>constexpr</code> e <code>consteval</code>, considerando seu uso em relação à variáveis e funções. O uso do modificador <code>constinit</code> e do modificador <code>const</code> em relação a métodos de classes será abordado apenas em capítulos posteriores.</p>
+<p>Para compreender a diferença entre os modificadores, considere o seguinte código:</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+
+int sum(int a, int b) // Case (a)
+// constexpr int sum(int a, int b) // Caso (b)
+{
+    int c = a + b;
+    return c;
+}
+
+int main()
+{
+    const int a = 1;
+    // int a = 1; // Caso (c)
+    int x = sum(a, 2);
+    std::cout &lt;&lt; x;
+}
+</code></pre>
+<p>Ao invocar a função <code>sum</code>, a soma dos valores <code>a</code> e <code>b</code> será computada. Esse calculo será feito em <strong>tempo de execução</strong> (runtime). Isso significa que a soma será efetuada apenas quando o usuário executar o programa. Por outro lado, ao utilizar <code>constexpr</code> (introduzido no C++11) na função <code>sum</code>, a função potencialmente será executada em <strong>tempo de compilação</strong> (compile time), ou seja, o valor de <code>x</code> talvez seja computado no momento de compilação do programa, caso as informações necessárias para tal estejam disponíveis.</p>
+<p>Para compreender esse processo, é importante lembrar que todo código C++ é compilado, gerando um arquivo binário que contém o código de máquina. Esse arquivo binário contém instruções em linguagem de baixo nível específicas para cada processador. Mostra-se abaixo uma comparação de dois trechos de código de baixo nível gerados pelo exemplo anterior para o caso (a) sem o uso de <code>constexpr</code> e para o caso (b) com o uso de <code>constexpr</code>:</p>
+<p>a) Sem o uso de <code>constexpr</code>:</p>
+<pre><code class="language-asm">mov     esi, 2
+mov     edi, 1
+call    sum(int, int)
+mov     DWORD PTR [rbp-8], eax
+</code></pre>
+<p>b) Com o uso de <code>constexpr</code>:</p>
+<pre><code class="language-asm">mov     DWORD PTR [rbp-8], 3
+</code></pre>
+<p>Não se preocupe caso não compreenda totalmente os códigos de máquina apresentados acima; trata-se de uma linguagem chamada <em>assembly</em>, extremamente próxima da linguagem de máquina. O código assembly está sendo usado apenas para ilustrar a diferença de código gerado: menos linhas aqui significa código mais eficiente. No caso (a), a linha <code>call sum(int, int)</code> mostra que a função <code>sum</code> será de fato invocada em tempo de execução. Já no caso (b), uma única linha é gerada, contendo o resultado (<code>3</code>) que foi, portanto, calculado em tempo de compilação e por isso aparece diretamente no código gerado.</p>
+<p>É importante notar que <code>constexpr</code> só será executado em tempo de compilação caso seja possível conhecer todos os dados necessários para sua execução. Ainda no exemplo, considerando o caso (c), nota-se que utilizar uma variável não-<code>const</code> em uma função contendo o modificador <code>constexpr</code> ocasionará no seguinte código de máquina gerado:</p>
+<p>c) Com uso de <code>constexpr</code>, porém, a variável <code>a</code> não é <code>const</code></p>
+<pre><code class="language-asm">mov     DWORD PTR [rbp-4], 1
+mov     eax, DWORD PTR [rbp-4]
+mov     esi, 2
+mov     edi, eax
+call    sum(int, int)
+mov     DWORD PTR [rbp-8], eax
+</code></pre>
+<p>Uma forma de evitar que uma função <code>constexpr</code> gere valores em tempo de execução inesperadamente, é utilizar <code>consteval</code> (a partir do C++20). Diferente de <code>constexpr</code>, <code>consteval</code> ocasiona em um erro de compilação caso não consiga processar a função em tempo de compilação. Por exemplo:</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+
+consteval int sum(int a, int b)
+{
+    int c = a + b;
+    return c;
+}
+
+int main()
+{
+    // int a = 1; // Caso (a), gera erro de compilação
+    constexpr int a = 1; // Caso (b)
+    // const int a = 1; // Caso (c)
+    int x = sum(a, 2);
+    std::cout &lt;&lt; x;
+}
+</code></pre>
+<p>No exemplo acima, o caso (a) ocasionará em um erro de compilação. Os casos (b) e (c) geram o valor da variável <code>x</code> em tempo de compilação garantidamente. Note que, apesar dos casos (b) e (c) produzirem o mesmo código nesse caso, o uso de <code>const</code> e de <code>constexpr</code> não é equivalente, como será visto a seguir.</p>
+<p>Basicamente, o modificador <code>const</code> aplicado a uma variável declara que aquela variável não será modificada em tempo de execução. O modificador <code>constexpr</code> aplicado a uma variável declara que aquela variável será computada em tempo de compilação e não será modificada em tempo de execução. Dessa forma, o caso (a) abaixo irá compilar normalmente, pois a variável <code>a</code> irá conter uma cópia constante da variável <code>var</code>, em tempo de execução. Já o caso (b) não irá compilar, pois a variável <code>a</code> não pode ser processada em tempo de compilação, visto que a variável <code>var</code> poderia ter sido modificada em algum momento no código.</p>
+<pre><code class="language-cpp">int main()
+{
+    int var = 1;
+
+    const int a = var; // Caso (a)
+    // constexpr int a = var; // Caso (b)
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="namespaces"><a class="header" href="#namespaces">Namespaces</a></h1>
+<p>Considere o seguinte cenário: você está ajudando no desenvolvimento de um software de um painel digital para uma loja.
+O painel mostra mensagens de promoções primárias da loja e, agora, deseja-se adicionar um painel secundário para exibir
+promoções secundárias. Você foi designado a implementar uma função que toma como parâmetro uma mensagem e a mostra no display do
+novo painel. Para tal, você começa a escrever o código:</p>
+<pre><code class="language-cpp">void write(std::string const&amp; message)
+{
+    // ...
+}
+</code></pre>
+<p>Para sua surpresa, já existe uma outra função com exatamente a mesma assinatura, e você recebe o seguinte erro de
+compilação: <code>error: redefinition of 'void write(string)'</code>. De fato, existe um problema de ambiguidade: Ambas as funções
+foram criadas para o mesmo propósito: escrever uma mensagem em um display. Porém, o display em questão é diferente
+dependendo do contexto. Existem várias maneiras de resolver tal problema. Uma possibilidade é dividir as implementações
+em <code>namespaces</code> diferentes.</p>
+<p>Um <code>namespace</code> é uma estrutura que pode conter classes, funções e variáveis. Eles não servem apenas para desambiguar
+uma função ou classe, mas também para organizar o projeto. Eles são estruturas opcionais, e não é raro encontrar
+bibliotecas e aplicativos escritos em C++ que são implementados sem o uso de <code>namespaces</code>.</p>
+<p>Para resolver o problema comentado, poderia-se escrever o código anterior da seguinte forma:</p>
+<pre><code class="language-cpp">namespace main_display {
+    void write(std::string const&amp; message)
+    {
+        // ... Implementação do display principal
+    }
+}
+
+namespace secondary_display {
+    void write(std::string const&amp; message)
+    {
+        // ... Implementação do display secundário
+    }
+}
+</code></pre>
+<p>Para usar uma ou outra implementação, é necessário explicitar o <code>namespace</code> ao chamar a função, da seguinte forma:
+<code>main_display::write(&quot;...exemplo...&quot;);</code>. Um código de exemplo é mostrado abaixo:</p>
+<pre><code class="language-cpp">int main()
+{
+    main_display::write(&quot;Mensagem no display principal&quot;);
+    secondary_display::write(&quot;Mensagem no display secundário&quot;);
+
+    return 0;
+}
+</code></pre>
+<p>O <code>namespace</code> mais comum nos programas C++ é o <code>std</code> (namespace relacionado à biblioteca padrão). Inclusive, ele
+apareceu já nos primeiros capítulos desse livro, para utilizar a função <code>cout</code>:</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+ 
+int main()
+{
+    std::cout &lt;&lt; &quot;Olá mundo!&quot; &lt;&lt; std::endl;
+    return 0;
+}
+</code></pre>
+<p>No caso de você utilizar muitas funções e estruturas de dentro de um mesmo <code>namespace</code>, é possível utilizar <code>using</code> para
+evitar a repetição do prefixo do namespace em questão, como no exemplo abaixo. Note, porém, que o uso de <code>using</code> no
+escopo global é <strong>desencorajado</strong> em alguns casos, pois pode afetar parcelas de código indesejadamente. Esse ponto será
+discutido novamente em capítulos posteriores desse livro.</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+
+// Sugere-se evitar `using` global
+// using namespace std;
+
+int main()
+{
+    // `using` dentro do escopo de alguma função é preferível
+    using namespace std;
+    cout &lt;&lt; &quot;Ol mundo!&quot; &lt;&lt; endl;
+    
+    return 0;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="visão-geral-sobre-o-processo-de-compilação"><a class="header" href="#visão-geral-sobre-o-processo-de-compilação">Visão geral sobre o processo de compilação</a></h1>
+<p>Conhecer o processo de compilação e linkagem do C++ é importante não apenas pelo aspecto teórico. A compreensão ajuda na
+solução de problemas principalmente relacionados à gerenciamento de dependências, e o reconhecimento de problemas de
+linkagem.</p>
+<p>Apesar do processo ser possivelmente um pouco diferente entre diferentes sistemas operacionais, a noção geral é
+aproximadamente a mesma. O processo tem basicamente 3 etapas: Pré-processamento, compilação e linkagem, como ilustrado
+na figura abaixo. Após explicado  essas etapas, esse capítulo explica brevemente sobre o processo de carregamento e
+execução de código compilado, e sobre o uso de bibliotecas externas.</p>
+<p><img src="cap3/./images/overview_compilacao.png" alt="Processo de compilação" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="pré-processamento"><a class="header" href="#pré-processamento">Pré-processamento</a></h1>
+<p>O pré-processador cuida de resolver todas as macros disponíveis no programa.
+Macros são os comandos que iniciam com <code>#</code>, tais como <code>#include</code> e <code>#define</code>.
+Para o escopo dessa seção, explicaremos o uso de quatro macros: <code>#include</code>, <code>#define</code>, <code>#ifdef</code> e <code>#ifndef</code>.</p>
+<p>Na verdade, já usamos <code>#include</code> algumas vezes desde o início desse livro, mas não sabiamos exatamente seu funcionamento.
+Basicamente, o que esse comando faz é buscar o conteúdo de um arquivo e inclui-lo (copia-lo) no local do <code>#include</code>.
+Considere o seguinte exemplo: imagine que você tem um projeto com 2 arquivos, <code>main.cpp</code> e <code>sum.hpp</code>. Esse
+último contém uma função auxiliar <code>int sum(int a, int b)</code>, e você gostaria de utilizar essa função no <code>main.cpp</code>. Isso pode
+ser feito utilizando o <code>#include</code>:</p>
+<p><code>sum.hpp</code></p>
+<pre><code class="language-cpp">int sum(int a, int b)
+{
+    return a + b;
+}
+</code></pre>
+<p><code>main.cpp</code></p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &quot;sum.hpp&quot;
+
+int main()
+{
+    std::cout &lt;&lt; sum(2, 3) &lt;&lt; std::endl;
+    return 0;
+}
+</code></pre>
+<p>Note a diferença entre os dois <code>includes</code>: O primeiro utiliza <code>&lt;nome do arquivo&gt;</code>, enquanto o segundo utiliza
+<code>&quot;nome do arquivo&quot;</code>. A diferença é que enquanto <code>&quot;&quot;</code> busca o arquivo à ser incluído a partir da pasta corrente (ou seja,
+a mesma pasta onde reside o arquivo <code>main.cpp</code>, nesse caso), utilizar <code>&lt;&gt;</code> faz com que o pré-processador busque o arquivo
+em algumas pastas pré-determinadas, como é o caso dos diretórios padrão do sistema.</p>
+<p>Existe um problema que, usualmente, um arquivo pode depender de outro que pode já ter sido incluído previamente.
+Por exemplo, se existirem dois arquivos, <code>a.hpp</code> e <code>b.hpp</code>, onde <code>a.hpp</code> inclui <code>b.hpp</code> e vice versa, teriamos uma
+recursão de inclusões impossível de resolver. Por isso, utiliza-se <em>include guards</em> para evitar esse problema, como no
+exemplo abaixo.</p>
+<p>Ao incluir-se o arquivo <code>a.hpp</code> em <code>main.cpp</code>, o conteúdo do arquivo <code>a.hpp</code> irá ser copiado. Em <code>a.hpp</code>,
+o pré-processador irá verificar a existência da macro <code>__A_HPP</code>. Como ela não existe (<code>#ifndef</code>), ela será definida (<code>#define</code>),
+e o conteúdo de <code>a.hpp</code> será totalmente copiado. Dessa forma, o arquivo <code>b.hpp</code> será incluído. Aqui, o mesmo procedimento
+irá ocorrer, sendo definida uma variável <code>__B_HPP</code>. Porém, ao incluir <code>a.hpp</code> de dentro de <code>b.hpp</code>, percebe-se que, agora,
+a macro <code>__A_HPP</code> está definida. Sendo assim, o <code>ifndef</code> do arquivo <code>a.hpp</code> percebe que não precisa processar novamente
+o mesmo arquivo.</p>
+<p><code>main.cpp</code></p>
+<pre><code class="language-cpp">#include &quot;a.hpp&quot;
+
+int main()
+{
+    return 0;
+}
+</code></pre>
+<p><code>a.hpp</code></p>
+<pre><code class="language-cpp">#ifndef __A_HPP
+#define __A_HPP
+
+#include &quot;b.hpp&quot;
+
+#endif
+</code></pre>
+<p><code>b.hpp</code></p>
+<pre><code class="language-cpp">#ifndef __B_HPP
+#define __B_HPP
+
+#include &quot;a.hpp&quot;
+
+#endif
+</code></pre>
+<p>O processo de inclusão de arquivos <code>hpp</code> é muito importante para a modularização de código.
+Em C++, é comum separar a <em>declaração</em> das funções, classes e estruturas em arquivos <code>.hpp</code>, e a <em>definição</em> das mesmas
+em arquivos <code>.cc</code> ou <code>.cpp</code>. Exceto em alguns casos específicos, como no uso de templates (será visto apenas em
+capítulos mais avançados).</p>
+<p>Erros de pré-processamento ocorrem na primeira etapa do processo de compilação. Para exemplificar, considere o exemplo
+abaixo, e imagine que não existe o arquivo <code>some_file.hpp</code>. O erro no <code>gcc</code> é <code>a.cc:1:10: fatal error: some_file.hpp: No such file or directory</code>.
+Isso significa que o arquivo não existe ou que ele existe, mas não está na pasta correta para que seja encontrado. É
+muito importante que se tenha isso bem conhecido, visto que esse conhecimento auxilia na resolução de problemas no processo
+de compilação.</p>
+<pre><code class="language-cpp">#include &quot;some_file.hpp&quot;
+
+int main()
+{
+    return 0;
+}
+</code></pre>
+<p>Macros também podem ser utilizadas como &quot;funções&quot; modificadas em tempo de compilação. Esse tema não vai ser discutido em
+profundidade nesse capítulo, e sugere-se não utilizar macros para executar esse tipo de rotina em tempo de compilação.
+Apenas a titulo de exemplo, seria possível definir a seguinte macro:</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+#define POW2(x) x*x
+
+int main()
+{
+    std::cout &lt;&lt; POW2(4) &lt;&lt; std::endl;
+
+    return 0;
+}
+</code></pre>
+<p>A macro toma como parâmetro um valor <code>x</code> não tipado e troca o código por <code>x*x</code>. Para visualizar esse efeito, no <code>gcc</code>,
+é possível compilar o arquivo acima com <code>gcc -E main.cpp</code>, produzindo algo semelhante ao arquivo pré-processado abaixo.
+Note que a compilação não gerou um executável nesse caso, pois a opção <code>-E</code> orienta o compilador a parar o processo de
+compilação após a etapa de pré-processamento.</p>
+<pre><code class="language-cpp">// ... Outros comentários aqui ...
+int main()
+{
+    std::cout &lt;&lt; 4*4 &lt;&lt; std::endl;
+
+    return 0;
+}
+</code></pre>
+<p>Apesar de parecer útil, a utilização de macros traz vários problemas. Por exemplo, veja o que aconteceria se chamassemos
+<code>POW2(4 + 1)</code>:</p>
+<pre><code class="language-cpp">int main()
+{
+    std::cout &lt;&lt; 4 + 1*4 + 1 &lt;&lt; std::endl;
+
+    return 0;
+}
+</code></pre>
+<p>O resultado seria <code>4 + 1 * 4 + 1</code>, ou seja, <code>9</code> (Ao invés de <code>25</code>, como seria o esperado). Isso acontece por que as
+macros não são equivalentes à chamadas de função. Lembre-se você está apenas criando macros que copiam valores de um
+lado para outro. Uma possível solução para esse caso seria de adicionar parênteses à macro: <code>#define POW2(x) (x)*(x)</code>,
+resultando em:</p>
+<pre><code class="language-cpp">int main()
+{
+    std::cout &lt;&lt; (4 + 1)*(4 + 1) &lt;&lt; std::endl;
+
+    return 0;
+}
+</code></pre>
+<p>De qualquer forma, orienta-se a criar funções simples do C++ e, possívelmente, utilizar <code>constexpr</code> em casos semelhantes
+à esses.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="compilação"><a class="header" href="#compilação">Compilação</a></h1>
+<p>A próxima etapa é a de compilação, que traduz o código C++ em código assembly. Esse código, em conjunto com vários
+outros arquivos, são linkados, produzindo assim o executável final (ou biblioteca).</p>
+<p>Essa é uma das partes do livro que depende de ambiente (Sistema Operacional, compilador...) para que você possa
+reproduzir. Apenas para fins didáticos, essa seção utilizará o Sistema Operacional Linux e o compilador GCC, invocado
+pela linha de comando (terminal). Considere o seguinte programa:</p>
+<p><code>main.cpp</code></p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+
+double f(double x)
+{
+    return 3*x*x + 2*x - 1;
+}
+
+double g(double x)
+{
+    return 3*f(x + 1.);
+}
+
+int main()
+{
+    std::cout &lt;&lt; f(3.) &lt;&lt; std::endl;
+    std::cout &lt;&lt; g(4.) &lt;&lt; std::endl;
+}
+</code></pre>
+<p>Pela linha de comando, utilizando GCC, é possível compilar o programa acima invocando o comando <code>g++ main.cpp</code>, o que
+produz um executável de nome <code>a.out</code>. Imagine, porém, que o código do <code>main.cpp</code> começa a crescer, e está agora com 1000
+linhas de código. Outras pessoas começaram a trabalhar no mesmo projeto. Não seria fácil manter e evoluir o programa
+em um só arquivo grande com várias pessoas mexendo nele todos os dias.
+Essa é uma das motivações para separar o projeto em vários arquivos. Move-se, portanto, a implementação de <code>f</code> e de <code>g</code>
+para os arquivos <code>f.hpp</code> e <code>g.hpp</code>:</p>
+<p><code>main.cpp</code></p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &quot;f.hpp&quot;
+#include &quot;g.hpp&quot;
+
+int main()
+{
+    std::cout &lt;&lt; f(3.) &lt;&lt; std::endl;
+    std::cout &lt;&lt; g(4.) &lt;&lt; std::endl;
+}
+</code></pre>
+<p><code>f.hpp</code></p>
+<pre><code class="language-cpp">double f(double x)
+{
+    return 3*x*x + 2*x - 1;
+}
+</code></pre>
+<p><code>g.hpp</code></p>
+<pre><code class="language-cpp">#include &quot;f.hpp&quot;
+
+double g(double x)
+{
+    return 3*f(x + 1.);
+}
+</code></pre>
+<p>Compilar esse pequeno exemplo produz a seguinte mensagem de erro:</p>
+<pre><code class="language-sh">$ g++ main.cc 
+In file included from g.hpp:1,
+                 from main.cc:3:
+f.hpp:1:8: error: redefinition of ‘double f(double)’
+    1 | double f(double x)
+      |        ^
+In file included from main.cc:2:
+f.hpp:1:8: note: ‘double f(double)’ previously defined here
+    1 | double f(double x)
+      |        ^
+</code></pre>
+<p>Conforme explicado no capítulo anterior, a ausência das <em>include guards</em> pode ser perigoso, como é o presente caso.
+Isso porque tanto <code>main.cpp</code> quanto <code>g.hpp</code> incluem <code>f.hpp</code>, gerando uma redefinição da função <code>f</code>.
+Isso fica bem claro quando verificamos o output da etapa de pré-processamento isoladamente com <code>g++ -E main.cc</code>.
+O problema pode ser resolvido, incluindo os <em>include guards</em> (#ifndef ... #define ... #endif), conforme código abaixo:</p>
+<p><code>f.hpp</code></p>
+<pre><code class="language-cpp">#ifndef __F_HPP
+#define __F_HPP
+
+double f(double x)
+{
+    return 3*x*x + 2*x - 1;
+}
+
+#endif
+</code></pre>
+<p><code>g.hpp</code></p>
+<pre><code class="language-cpp">#ifndef __G_HPP
+#define __G_HPP
+
+#include &quot;f.hpp&quot;
+
+double g(double x)
+{
+    return 3*f(x + 1.);
+}
+
+#endif
+</code></pre>
+<p>O novo código compila e roda normalmente, porém, não é recomendado manter as implementações das funções em headers files (arquivos <code>.hpp</code>),
+pois a medida que o projeto cresce, o processo de compilação começará a ficar lento. Além disso, uma modificação em
+qualquer header file ocasionará na recompilação de todo o projeto (Ou seja, ocasionaria em um &quot;rebuild&quot;).</p>
+<p>Dessa forma, é comum separar a declaração das classes e funções em arquivos <code>hpp</code> e a definição das mesmas em arquivos
+<code>cpp</code>, exceto aqueles que contém templates. Nosso exemplo segue da seguinte forma:</p>
+<p><code>main.cc</code></p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &quot;f.hpp&quot;
+#include &quot;g.hpp&quot;
+
+int main()
+{
+    std::cout &lt;&lt; f(3.) &lt;&lt; std::endl;
+    std::cout &lt;&lt; g(4.) &lt;&lt; std::endl;
+}
+</code></pre>
+<p><code>f.hpp</code></p>
+<pre><code class="language-cpp">#ifndef __F_HPP
+#define __F_HPP
+
+double f(double x);
+
+#endif
+</code></pre>
+<p><code>f.cc</code></p>
+<pre><code class="language-cpp">#include &quot;f.hpp&quot;
+
+double f(double x)
+{
+    return 3*x*x + 2*x - 1;
+}
+</code></pre>
+<p><code>g.hpp</code></p>
+<pre><code class="language-cpp">#ifndef __G_HPP
+#define __G_HPP
+
+#include &quot;f.hpp&quot;
+
+double g(double x);
+
+#endif
+</code></pre>
+<p><code>g.cc</code></p>
+<pre><code class="language-cpp">#include &quot;g.hpp&quot;
+
+double g(double x)
+{
+    return 3*f(x + 1.);
+}
+</code></pre>
+<p>Para que os novos arquivos estejam acessiveis no momento da compilação, o processo de compilação precisa ser alterado.
+Precisamos, agora, colocar todos os arquivos <code>.cpp</code> para que sejam compilados e <em>linkados</em> juntos:</p>
+<p><code>g++ f.cc g.cc main.cc</code></p>
+<p>Conforme notado anteriormnete, nos <code>#includes</code> locais, utiliza-se aspas duplas para incluir os arquivos de projeto, e
+utilizamos <code>&lt;</code> e <code>&gt;</code> para incluir arquivos de sistema (<code>iostream</code>, por exempo). Arquivos incluídos com aspas duplas são
+arquivos presentes da mesma pasta em relação ao arquivo que está sendo incluído. Arquivos incluidos com <code>&lt;</code> e <code>&gt;</code> são
+buscados em uma lista pré-definida de pastas, no processo de compilação. É possível adicionar uma pasta nessa lista,
+utilizando a opção de compilação <code>-I [caminho]</code>. De fato, não é raro encontrar projetos que acabam adicionando a pasta
+corrente (local) nessa lista e utilizando apenas <code>&lt;</code> e <code>&gt;</code> em todos os includes. Isso pode ser uma vantagem, por exemplo,
+quando estamos reestruturando o projeto e movendo arquivos. Trocando todos os includes do nosso exemplo para atuarem
+com <code>&lt;</code> e <code>&gt;</code>, o processo de compilação se tornaria-se <code>g++ f.cc g.cc main.cc -I..</code>.</p>
+<p>O processo de compilação da forma como está invocado acima, na verdade inclui o processo de pré-processamento (que já
+vimos) e o processo de linkagem. É possível invocar o compilador individualmente para cada arquivo arquivo <code>.cpp</code> e,
+posteriormente, invocar o processo de linkagem separadamente. Faremos isso para fins didáticos:</p>
+<pre><code class="language-sh">g++ -c g.cc -I.
+g++ -c f.cc -I.
+g++ -c main.cc -I.
+</code></pre>
+<p>Esses comandos geram os arquivos chamados <em>código objeto</em>: <code>g.o</code>, <code>f.o</code> e <code>main.o</code>. Esses arquivos não são executáveis.
+Para finalizar o processo de compilação, é necessário invocar (Não estou utilizando diretamente o <em>linker</em> nesse caso): <code>g++ f.o g.o main.o</code>.
+Uma representação do que foi feito é mostrada abaixo:</p>
+<p><img src="cap3/./images/diagrama_compilacao_e_linkagem.png" alt="Diagrama de compilação e linkagem" /></p>
+<p>É importante ter em mente essas duas etapas como processos separados.
+Erros de compilação (sintaxe e pré-processamento, por exemplo) acontecerão mesmo quando você tentar compilar o arquivo
+isoladamente. Erros de <em>linkagem</em> (tais como <code>undefined reference</code>) acontecerão apenas quando você tentar compilar todos
+os arquivos em conjunto ou quando você estiver executando a etapa de linkagem manualmente.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="linkagem"><a class="header" href="#linkagem">Linkagem</a></h1>
+<p>O processo final de geração do executável é a linkagem (não é um verbo real).
+Neste passo, os <em>códigos objeto</em> de todas as <em>unidades de tradução</em> envolvidas no programa são unidos em um só.
+Um arquivo executável pode ser obtido com o seguinte comando:</p>
+<p><code>g++ f.o g.o main.o</code></p>
+<p>É importante ter em mente essas etapas do processo de compilação.
+Erros de compilação (sintaxe e pré-processamento) acontecerão mesmo quando você tentar compilar cada arquivo isoladamente.
+Erros de linkagem (<code>undefined reference</code>, por exemplo) acontecerão apenas quando você tentar linkar os arquivos
+para gerar um executável.</p>
+<p>A linkagem comentada nessa seção é conhecida como <em>linkagem estática</em>. O código executável gerado contém todas as funções
+necessárias para executa-lo, como ilustrado na imagem abaixo. Nota importante: também é usual utilizar arquivos <code>.a</code> (&quot;Archive&quot;)
+no processo de linkagem estática no Linux. Arquivos <code>.a</code> são apenas uma coleção de vários arquivos <code>.o</code>. Para gerar
+arquivos <code>.a</code>, é possível utilizar o executável <code>ar</code>.</p>
+<p><img src="cap3/./images/linkagem_estatica.png" alt="Linkagem estática" /></p>
+<p>De forma alternativa, é possível organizar um projeto de software com funções separadas em
+diversos arquivos executáveis. Esses arquivos, ao invés de serem linkados estáticamente, são <em>linkados dinamicamente</em>, o
+que significa que as funções ficam espalhadas em diferentes arquivos, e buscadas pelo software em tempo de execução, ao
+invés de serem buscadas em tempo de compilação, como no caso da <em>linkagem estática</em>.</p>
+<p>No Linux, esses arquivos possuem extensão <code>.so</code> (&quot;Shared Objects&quot;), enquanto no Windows possuem extensão <code>.dll</code>
+(Dynamic Linked Library). O processo de geração, linkagem e carregamento de arquivos com linkagem dinâmica é diferente
+no linux e no Windows.</p>
+<p>A ilustração abaixo traz uma visão geral do processo de consumo da função <code>function_c</code> a partir de uma linkagem
+dinâmica. Nesse caso, não está sendo mostrado como o arquivo <code>arquivo2.so</code> foi gerado. No caso do Windows, o arquivo
+<code>arquivo2.so</code> se chamaria <code>arquivo2.dll</code>.</p>
+<p><img src="cap3/./images/linkagem_dinamica.png" alt="Linkagem estática" /></p>
+<p>As vantagens de utilizar uma biblioteca de linkagem estática incluem:</p>
+<ul>
+<li>Como todo o código está num só arquivo, atualizações de outras dependências não afetam (portanto, não quebram) o executável;</li>
+<li>Facilidade de instalação e compartilhamento do programa.</li>
+</ul>
+<p>Enquanto algumas desvantagens são:</p>
+<ul>
+<li>O arquivo executável tende a ficar cada vez maior, pois precisa conter todas as funções em um só arquivo;</li>
+<li>Para atualizar um subconjunto de funções é necessário atualizar o arquivo executável inteiro.</li>
+</ul>
+<p>Por outro lado, algumas vantagens da linkagem dinâmica incluem:</p>
+<ul>
+<li>Como o código está distribuído em diversos arquivos, atualizar um subconjunto de funções significa atualizar apenas alguns arquivos, ao invés de necessitar atualizar o código inteiro;</li>
+<li>As funções mais comuns podem ser aproveitadas e utilizadas em mais de um arquivo executável;</li>
+<li>Funções não utilizadas não precisam ser carregadas para a memória.</li>
+</ul>
+<p>Finalmente, algumas desvantagens incluem:</p>
+<ul>
+<li>No caso de uso excessivo de bibliotecas dinâmicas, pode ser difícil de gerenciar as dependências;</li>
+<li>No caso de uma ou mais bibliotecas dinâmicas não estarem disponíveis, isso pode impossibilitar o uso de um executável.</li>
+</ul>
+<p>Existem duas formas de consumir uma biblioteca dinâmica: Por meio de linkagem dinâmica em tempo de compilação
+(<em>Dynamic Linking</em>) ou por meio de carregamento dinâmico em tempo de execução (<em>Dynamic Loading</em>). Os dois conceitos
+podem ser inicialmente confusos, principalmente porque o primeiro deles possa ser confundido com o caso de linkagem
+estática, mas essas formas são diferentes.</p>
+<p><em>Dynamic Linking</em> faz uso de um procedimento provido pelo sistema operacional. Ao executar um programa que foi compilado
+dessa forma, as bibliotecas dependentes são automaticamente carregadas no início da execução do programa. Ou seja, a
+linkagem é feita em tempo de execução, mas é feita automaticamente.</p>
+<p>Por outro lado <em>Dynamic Loading</em> significa que o programador do executável utiliza funções auxiliares para carregar
+dinâmicamente cada biblioteca que queira. Por exemplo, no Linux, é possível utilizar a função <code>dlopen</code> para carregar
+um arquivo <code>.so</code>. Ou seja, a linkagem é feita em tempo de execução, mas é feita manualmente.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="gerenciamento-de-pacotes"><a class="header" href="#gerenciamento-de-pacotes">Gerenciamento de pacotes</a></h1>
+<p>Como visto, o processo de compilação passa por diferentes estágios até a criação de um arquivo executável. A separação
+de funções, variáveis, constantes e outras entidades em artefatos (arquivos <code>.hpp</code>, <code>.a</code>, <code>.so</code> etc...) possibilita o
+compartilhamento de código.</p>
+<p>Por exemplo, se um programador A cria um <em>módulo</em> de um software escrito em C++ que é capaz de criar uma janela
+(interface gráfica), esse mesmo módulo pode ser utilizado por um programador B em outro projeto, desde que o programador A
+tenha utilizado alguma das ferramentas apresentadas nessa seção.</p>
+<p>Uma possibilidade, seria de o programador A ter criado uma biblioteca estática e prover esses arquivos binários e os arquivos
+<code>.hpp</code> associados para o programador B. Dessa forma, o programador A pode criar um <em>pacote</em>, contendo a biblioteca que
+pode ser enviado ao programador B, e que contém todos os arquivos necessários para que o programador B possa criar
+seus programas.</p>
+<p>Alguns exemplos de bibliotecas incluem: Qt (criação de programas com interface gráfica), Boost (contém
+várias funções auxiliares), GoogleTest (automatização de testes), entre muitas outras.</p>
+<p>O problema é que, em geral, para gerenciar e utilizar essas bibliotecas, normalmente o programador precisa ter algum
+conhecimento específico da biblioteca (normalmente obtém-se o conhecimento por meio da leitura dos manuais de cada uma
+delas). Uma alternativa interessante para utilizar as bibliotecas é o uso do software <code>CMake</code>, abordado em outra seção
+desse livro.</p>
+<p>Um segundo problema que ocorre é que é possível que as bibliotecas tenham sido criadas utilizando outras bibliotecas.
+Essa sequência de dependências pode ocasionar em problemas de compilação e execução que são dificeis de se lidar. Daí
+vem a necessidade de um gerenciador de pacotes. Gerenciadores de pacote são ferramentas que auxiliam no processo de
+download, automatizam o processo de instalação, e cuidam das dependências entre os pacotes e o seu programa.</p>
+<p>O intuito dessa seção não é fazer propaganda nem ensinar uma ferramenta específica. Ao invés disso, apenas apontam-se os
+problemas e algumas possíveis ferramentas que podem ser utilizadas para resolve-los, que incluem:</p>
+<ul>
+<li>Conan</li>
+<li>Conda</li>
+<li>apt - Advanced Package Tool</li>
+<li>vcpkg</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="introdução-à-biblioteca-padrão-do-c"><a class="header" href="#introdução-à-biblioteca-padrão-do-c">Introdução à biblioteca padrão do C++</a></h1>
+<p>A biblioteca padrão do C++ provê algumas funcionalidades básicas para desenvolvimento de software, como strings,
+vetores, listas, tuplas, além de funções utilitárias para lidar com gerenciamento de memória, I/O, sistema de arquivos,
+threads, entre outras. Esse capítulo apresenta uma breve introdução, mostrando algumas das funcionalidades disponíveis
+na biblioteca. Não é necessário baixar nem configurar nada, para utilizar a biblioteca padrão.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="string"><a class="header" href="#string">String</a></h1>
+<p>Strings são estruturas de dados que representam sequências de elementos, sendo o mais comum a sequência de caracteres
+(<code>char</code>). A biblioteca padrão provê uma série de funcionalidades para lidar com strings, a partir do <em>header</em> <code>&lt;string&gt;</code>.</p>
+<p>É importante notar que sequências de caracteres dentro de aspas duplas (<code>&quot;</code>) não são do tipo <code>string</code> em C++. Considere
+o exemplo abaixo:</p>
+<pre><code class="language-c++">#include &lt;string&gt;
+
+int main()
+{
+    auto word = &quot;Exemplo&quot;; // *Não* é do tipo std::string
+    auto other_word = std::string(&quot;Outro Exemplo&quot;); // É do tipo std::string
+
+    // (A partir de C++14)
+    using namespace std::string_literals;
+    auto yet_another_word = &quot;Mais um exemplo&quot;s; // É do tipo std::string
+
+    return 0;
+}
+</code></pre>
+<p><code>word</code> não é do tipo <code>std::string</code>. Isso por que C++ não possui <code>string</code> como tipo primitivo da linguagem. Ao invés
+disso, <code>word</code> possui tipo <code>const char[8]</code>, que representa um &quot;array de 8 elementos do tipo <code>char</code>&quot; (7 caracteres na
+palavra &quot;Exemplo&quot; + 1 caracter de fim de texto, representado por <code>\0</code>).
+Por outro lado, <code>other_word</code> e <code>yet_another_word</code> são do tipo <code>std::string</code>.</p>
+<p>A vantagem de utilizar <code>std::string</code> ao invés de <code>const char[]</code>, é que ela provê várias funções e métodos de manipulação
+e extração de dados para strings. Por exemplo, é possível concatenar duas <code>std::string</code>s utilizando o operador <code>+</code>, mas
+não é possível fazer o mesmo com <code>const char[]</code>:</p>
+<pre><code class="language-c++">#include &lt;string&gt;
+#include &lt;iostream&gt;
+
+int main()
+{
+    using namespace std::string_literals;
+    auto string1 = &quot;Hello &quot;s;
+    auto string2 = &quot;World&quot;s;
+    auto string3 = string1 + string2;
+    std::cout &lt;&lt; string3 &lt;&lt; &quot;\n&quot;; // Mostra &quot;Hello World&quot;
+    
+    // O código abaixo produz um erro de compilação, pois não é possível
+    // somar duas variáveis do tipo `const char*`:
+    // auto var1 = &quot;Hello &quot;;
+    // auto var2 = &quot;World&quot;;
+    // auto var3 = var1 + var2; // ERRO de compilação
+    
+    return 0;
+}
+</code></pre>
+<p>A partir desse momento, utiliza-se a palavra &quot;string&quot; para denotar <code>std::string</code>.</p>
+<p>É possível converter strings de/para os tipos primitivos <code>int</code> e <code>float</code>, por meio de funções auxiliares. Esse tipo de
+conversão é especialmente útil para traduzir inputs de usuário em dados numéricos. Exemplo:</p>
+<pre><code class="language-c++">#include &lt;string&gt;
+#include &lt;iostream&gt;
+
+int main()
+{
+    using namespace std::string_literals;
+    auto value1 = &quot;12&quot;s;
+    auto value2 = &quot;7&quot;s;
+    auto string3 = value1 + value2; // Produz &quot;127&quot; (com tipo string)
+    auto value3 = std::stoi(value1) + std::stoi(value2); // Produz 19 (com tipo int)
+    std::cout &lt;&lt; string3 &lt;&lt; &quot;, &quot; &lt;&lt; value3 &lt;&lt; &quot;\n&quot;; // Mostra 127, 19
+
+    return 0;
+}
+</code></pre>
+<p>Para converter strings para floats, pode-se utilizar <code>std::stof</code>. Para converter <code>int</code> e <code>float</code> para strings, pode-se
+utilizar <code>std::to_string</code>. Uma lista extensa de funcionalidades para <code>std::sring</code> está <a href="https://en.cppreference.com/w/cpp/header/string">disponível aqui</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="inputoutput-entradasaída"><a class="header" href="#inputoutput-entradasaída">Input/Output (Entrada/Saída)</a></h1>
+<p>O termo <code>I/O</code> se refere aos dispositivos de Entrada (<em>Input</em>) e Saída (<em>Output</em>). Essa seção traz
+uma introdução para trabalhar com a leitura de dados do usuário pelo terminal (CMD) e a escrita de dados em terminal e
+em arquivos de texto.</p>
+<p>A forma mais comum de escrever dados no terminal, em C++, é a partir de <code>std::cout</code> (&quot;Character Output&quot;), e é a
+forma como vêm sendo escritos os exemplos desse livro desde os primeiros capítulos.
+Para utilizar o <code>std::cout</code>, é necessário incluir o <em>header</em> <code>&lt;iostream&gt;</code>, como mostra o exemplo abaixo.</p>
+<pre><code class="language-c++">#include &lt;iostream&gt;
+
+int main()
+{
+    std::cout &lt;&lt; &quot;Hello World!\n&quot;; // Escreve &quot;Hello World!&quot; e pula uma linha (\n)
+    return 0;
+}
+</code></pre>
+<p>A sintaxe é diferente em relação às chamadas de função normalmente utilizada. Note que ao invés de <code>std::cout(&quot;texto&quot;)</code>,
+escreve-se <code>std::cout &lt;&lt; &quot;texto&quot;;</code>. Isso se dá pela forma como <code>std::cout</code> foi implementado. Na verdade, ele é um
+objeto que possui um <code>operator&lt;&lt;</code>, e não uma função. Essa informação é apenas a título de curiosidade, e não afeta o uso
+do <code>std::cout</code>.</p>
+<p>Não é necessário converter os dados para string para utilizar o <code>std::cout</code>. Ele consegue lidar com dados de outros
+tipos, como <code>int</code> e <code>float</code>. Basta escrever <code>std::cout &lt;&lt; my_int;</code>, sendo <code>my_int</code> uma variável do tipo
+<code>int</code>, por exemplo.</p>
+<p>É possível ler dados do usuário a partir de <code>std::cin</code> (&quot;Character input&quot;), como no exemplo abaixo.
+Os dados lidos podem ser de qualquer tipo primitivo ou string. Os dados podem ser separados por quebra de linha ou por
+espaço.</p>
+<pre><code class="language-c++">#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+int main()
+{
+    using namespace std::string_literals;
+    std::cout &lt;&lt; &quot;Digite os 3 dados:\n&quot;;
+    auto my_int = 0;
+    auto my_float = 0.;
+    auto my_string = &quot;&quot;s;
+
+    std::cin &gt;&gt; my_int &gt;&gt; my_float &gt;&gt; my_string;
+
+    std::cout &lt;&lt; &quot;Você digitou: &quot; &lt;&lt; my_int &lt;&lt; &quot;, &quot; &lt;&lt; my_float &lt;&lt; &quot;, &quot; &lt;&lt; my_string &lt;&lt; &quot;\n&quot;;
+
+    return 0;
+}
+</code></pre>
+<p>Note que até agora todos os programas apresentados guardavam as suas variáveis em memória. Isso significa que, ao
+reiniciar o programa, todos os cálculos com as variáveis são perdidos. Uma das formas de persistir (guardar) dados em
+disco é utilizando o <code>fstream</code>, como no exemplo abaixo. Claro que isso é uma forma bastante primitiva de persistir
+dados. É importante lembrar que existem softwares de banco de dados e bibliotecas de gerenciamento de arquivos
+mais robustas. Mesmo assim, é interessante conhecer a biblioteca padrão, por ser uma alternativa válida para a
+persistência de dados em algumas situações. É importante apenas manter em mente que não é a única e nem necessariamente
+a melhor ferramenta para resolver qualquer problema.</p>
+<pre><code class="language-c++">#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+#include &lt;string&gt;
+
+int main() {
+    using namespace std::string_literals;
+
+    auto filename = &quot;arquivo.txt&quot;s;
+    auto file_stream = std::fstream(filename, std::ios::out);
+    if (!file_stream.is_open()) {
+        std::cout &lt;&lt; &quot;Failed to open &quot; &lt;&lt; filename &lt;&lt; '\n';
+        return -1;
+    }
+
+    auto variable = 1.234;
+    file_stream &lt;&lt; &quot;Conteúdo do arquivo!\n&quot;s;
+    file_stream &lt;&lt; variable;
+    
+    return 0;
+}
+</code></pre>
+<p>O exemplo acima abre um arquivo chamado <code>arquivo.txt</code> em <em>modo de saída</em> (<code>std::ios::out</code>). O programa verifica se foi
+possível abrir o arquivo e, caso negativo, gera uma mensagem e sai do programa com um código de erro (<code>return -1</code>).
+Uma vez aberto, escreve-se uma string de exemplo,
+e uma variável do tipo <code>float</code>. Note que o arquivo não é explicitamente fechado (<code>close</code>). Isso por que o
+<code>fstream</code> garante que o arquivo será fechado ao fim do escopo de vida do mesmo. Dessa forma, não é necessário fechar
+o arquivo explicitamente.</p>
+<p>O código capaz de gerar um programa que faz a leitura do mesmo arquivo é mostrado abaixo. Na verdade, essa é apenas uma
+das formas de fazer a leitura dos dados de um arquivo. Também é possível ler o conteúdo de um arquivo caracter por
+caracter. Para isso, poderia-se utilizar o método <code>file_stream.get(l);</code>, com <code>l</code> sendo do tipo <code>char</code>. Cada forma de
+leitura tem suas vantagens e desvantagens, e seu uso vai depender do problema que se está tentando resolver.</p>
+<pre><code class="language-c++">#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+#include &lt;string&gt;
+
+int main() {
+    using namespace std::string_literals;
+
+    auto filename = &quot;arquivo.txt&quot;s;
+    auto file_stream = std::fstream(filename, std::ios::in);
+    if (!file_stream.is_open()) {
+        std::cout &lt;&lt; &quot;Failed to open &quot; &lt;&lt; filename &lt;&lt; '\n';
+        return -1;
+    }
+
+    auto line = &quot;&quot;s;
+    auto i = 1;
+    while(!file_stream.eof()) {
+        getline(file_stream, line);
+        std::cout &lt;&lt; &quot;Linha &quot; &lt;&lt; i &lt;&lt; &quot;: &quot; &lt;&lt; line &lt;&lt; '\n';
+        i += 1;
+    }
+
+    return 0;
+}
+</code></pre>
+<h2 id="estudo-de-caso-input-de-dados-para-juizes-online"><a class="header" href="#estudo-de-caso-input-de-dados-para-juizes-online">Estudo de Caso: Input de dados para juizes online</a></h2>
+<p>Existem vários sites na internet para exercitar a prática de programação e algoritmos. Esses sites são conhecidos como
+&quot;juizes online&quot; como, por exemplo, <a href="https://onlinejudge.org/">UVa</a> e <a href="https://www.spoj.com/">Spoj</a>. Nesses sites, é comum
+encontrar problemas com um formato bastante específico para os inputs dos dados dos desafios. Essa subseção traz um breve tutorial para
+iniciantes em C++, em relação a como poderia-se fazer a leitura dos dados para esses tipos de problema.</p>
+<p>Para o exercício, considere o problema <a href="https://www.spoj.com/problems/PRIME1/">PRIME1</a> do Spoj, copiado (e traduzido)
+abaixo, para referência:</p>
+<blockquote>
+<p>Peter deseja gerar todos os números primos para seu sistema. Você deve ajuda-lo.
+Gere todos os números primos entre dois números dados.</p>
+<p><strong>Entrada</strong></p>
+<p>A entrada inicia com um número <code>t</code>, que representa o número de testes (t &lt;= 10).
+Cada uma das <code>t</code> próximas linhas contém dois números, <code>m</code> e <code>n</code>, separados por espaços.</p>
+<p><strong>Saída</strong></p>
+<p>Para cada caso de teste, escreva na tela todos os primos <code>p</code> onde <code>m &lt;= p &lt;= n</code>.
+Cada número primo deve ser escrito em uma linha diferente. Casos de teste devem ser separados por uma linha em branco.</p>
+<p><strong>Exemplo</strong></p>
+<p>Entrada: <br />
+2 <br />
+1 10 <br />
+3 5</p>
+<p>Saída: <br />
+2 <br />
+3 <br />
+5 <br />
+7</p>
+<p>3 <br />
+5</p>
+</blockquote>
+<p>O objetivo aqui <strong>não</strong> é resolver o problema completamente, apenas implementar a leitura dos dados. A entrada de
+dados segue um padrão bem definido, conforme o exemplo acima. A primeira linha contém apenas um número, que deve ser lido na
+variável <code>t</code>. As <code>t</code> linhas seguintes devem conter pares de números <code>(m, n)</code>.</p>
+<p>Conforme visto, é possível fazer a leitura dos dados a partir do <code>std::cin</code>. Utiliza-se, então, essa forma para fazer
+a leitura da variável <code>t</code>:</p>
+<pre><code class="language-c++">#include &lt;iostream&gt;
+
+int main() {
+    auto t = 0;
+    std::cin &gt;&gt; t;
+    std::cout &lt;&lt; &quot;CASOS DE TESTE: &quot; &lt;&lt; t &lt;&lt; '\n';
+
+    return 0;
+}
+</code></pre>
+<p>A seguir, para fazer a leitura dos pares <code>m</code> e <code>n</code>, é possível utilizar um <code>for</code> com um contador de <code>i = 0</code> até <code>t</code>.
+Enquanto esse contador não chegar no valor de <code>t</code>, lê-se um novo par de valores. Assume-se que os valores serão dois
+números válidos (Não é feita nenhuma verificação sobre os valores).</p>
+<pre><code class="language-c++">#include &lt;iostream&gt;
+
+int main() {
+    auto t = 0;
+    std::cin &gt;&gt; t;
+    std::cout &lt;&lt; &quot;CASOS DE TESTE: &quot; &lt;&lt; t &lt;&lt; '\n';
+
+    for (auto i = 0; i &lt; t; ++i) {
+        auto n = 0;
+        auto m = 0;
+        std::cin &gt;&gt; n &gt;&gt; m;
+
+        std::cout &lt;&lt; &quot;Processando dados: (&quot; &lt;&lt; n &lt;&lt; &quot;, &quot; &lt;&lt; m &lt;&lt; &quot;)\n&quot;;
+        // ... resto do código ...
+    }
+
+    return 0;
+}
+</code></pre>
+<p>Uma curiosidade interessante é que, no linux, é possível redirecionar o conteúdo de um arquivo texto, de forma que ele
+sirva de entrada para um programa. Por exemplo, digamos que você compile o arquivo acima e gere um executável chamado
+<code>programa</code>. Ao invés de executar esse programa e digitar as entradas dos dados manualmente, é possível criar um arquivo
+(por exemplo, <code>input.txt</code>) cujo conteúdo é conforme dado abaixo, e redirecionar o conteúdo desse arquivo para a entrada
+do programa <code>programa</code>, da seguinte forma: <code>./programa &lt; input.txt</code>.</p>
+<pre><code class="language-text">2
+1 10
+3 5
+</code></pre>
+<p>O resultado da execução é dado abaixo. Essa é uma forma rápida de manter arquivos de teste para problemas de maratona de
+programação e juizes online.</p>
+<pre><code class="language-sh">$ ./programa &lt; input.txt 
+CASOS DE TESTE: 2
+Processando dados: (1, 10)
+Processando dados: (3, 5)
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="array"><a class="header" href="#array">Array</a></h1>
+<p>Um <code>std::array</code> é um container com um número pré-definido de dados de um certo tipo. O tipo e o tamanho do array devem
+ser conhecidos em tempo de compilação. Isso significa que você não pode aumentar o tamanho do array a partir de um input
+de usuário, por exemplo.</p>
+<p>Uma das vantagens em utilizar <code>std::array</code> ao invés de arrays &quot;crus&quot; (por exemplo, <code>int[3]</code>), é que você pode passar <code>std::array</code>
+como argumentos de funções, e retorna-los sem complicações. Além disso, <code>std::array</code> possui métodos de acesso à dados do array e algumas
+operações auxiliares sobre ele.</p>
+<p>Para declarar e definir um <code>std::array</code>, basta escolher um tipo (e.g. <code>int</code>, <code>float</code>, etc...) e um tamanho, conforme
+exemplo abaixo:</p>
+<pre><code class="language-c++">#include &lt;array&gt;
+#include &lt;iostream&gt;
+
+int main()
+{
+    // Inicializa um array com 3 elementos. Os valores são '1', '2' e '3'.
+    auto my_arr = std::array&lt;int, 3&gt;{1, 2, 3};
+    for (int i = 0; i &lt; my_arr.size(); ++i) {
+        std::cout &lt;&lt; &quot;my_arr[&quot; &lt;&lt; i &lt;&lt; &quot;] = &quot; &lt;&lt; my_arr[i] &lt;&lt; &quot;\n&quot;;
+    }
+
+    // Preenche todo o array com o valor '42'    
+    my_arr.fill(42);
+    for (int i = 0; i &lt; my_arr.size(); ++i) {
+        std::cout &lt;&lt; &quot;my_arr[&quot; &lt;&lt; i &lt;&lt; &quot;] = &quot; &lt;&lt; my_arr[i] &lt;&lt; &quot;\n&quot;;
+    }
+
+    return 0;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="vector"><a class="header" href="#vector">Vector</a></h1>
+<p><code>std::vector</code> permite o programador a criar um vetor com um tamanho dinâmico de elementos. Em outras palavras, é uma estrutura que permite inserir e remover elementos de uma lista em tempo de execução. No exemplo abaixo, A linha 3 inclui o header <code>&lt;vector&gt;</code>, para que seja possível utilizar a estrutura de dados <code>std::vector</code>. A linha 17 cria uma instancia de um <code>vector</code>. Os elementos desse <code>vector</code> serão do tipo <code>Point</code>. Ou seja, não será possível colocar inteiros, doubles, ou variáveis de nenhum outro tipo nesse <code>vector</code>. O <code>vector</code> foi inicializado sem elementos e, nas linhas 19 e 20, dois elementos são adicionados utilizando o método <code>push_back</code>.</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;cmath&gt;
+#include &lt;vector&gt;
+ 
+struct Point {
+   double x;
+   double y;
+};
+ 
+double calculate_distance(Point p1, Point p2)
+{
+   return sqrt(pow(p1.x - p2.x, 2) + pow(p1.y - p2.y, 2));
+}
+ 
+int main()
+{
+   std::vector&lt;Point&gt; points;
+ 
+   points.push_back(Point{1.2, 3.4});
+   points.push_back(Point{4.5, 5.6});
+ 
+   std::cout &lt;&lt; &quot;A distância entre os pontos é &quot; &lt;&lt; calculate_distance(points[0], points[1]) &lt;&lt; std::endl;
+ 
+   return 0;
+}
+</code></pre>
+<p>A linha 22 usa a função <code>calculate_distance</code>, mas passa como parâmetros os elementos cujos índices são 0 e 1 no <code>vector</code>. Tenha cuidado para nunca acessar o <code>vector</code> com indices que não foram populados. Para saber a quantidade de elementos de um vector, é possível utilizar o método <code>size()</code>. Para remover o último elemento adicionado, é possível utilizar o método <code>pop_back()</code>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="map"><a class="header" href="#map">Map</a></h1>
+<p><code>std::map</code> é a primeira estrutura de dados que será abordada nesse livro. Pense em uma estrutura de dados como uma <code>struct</code> que guarda informações para consultas, e que algumas estruturas organizam os dados de uma maneira específica para que as consultas sejam mais rápidas.</p>
+<p>Toda estrutura de dados é diferente uma da outra, e mais apta para resolver um problema do que outro, por exemplo, todas as coisas que são feitas com <code>std::map</code> podem ser feitas com <code>std::vector</code> (estrutura exibida posteriormente), mas dependendo do que seja, fazer com <code>std::map</code> pode ser mais fácil e simples, ou mais difícil e complicado.</p>
+<p><code>std::map</code> é uma estrutura de dados que mapeia um dado à outro. Ele é formado por vários pares de chave (<code>key</code>) e valor (<code>value</code>), depois de montado, dada uma chave, a estrutura deverá retornar qual é o valor único que foi atribuído àquela chave.</p>
+<p>Considere a seguinte tabela de dados como exemplo:</p>
+<table><thead><tr><th>Nome</th><th>Idade</th></tr></thead><tbody>
+<tr><td><code>&quot;Alice&quot;</code></td><td>20</td></tr>
+<tr><td><code>&quot;Bruno&quot;</code></td><td>30</td></tr>
+<tr><td><code>&quot;Carol&quot;</code></td><td>40</td></tr>
+<tr><td><code>&quot;Júlia&quot;</code></td><td>50</td></tr>
+<tr><td><code>&quot;Pedro&quot;</code></td><td>50</td></tr>
+</tbody></table>
+<p>Vamos criar um <code>std::map</code> vazio, adicionar cada linha dessa tabela, e então, dado um nome, quermos ter certeza que a estrutura vai retornar a idade correta.</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;map&gt;
+#include &lt;string&gt;
+
+int main()
+{
+    // An empty map
+    std::map&lt;std::string, int&gt; ages;
+    // Adding the data
+    ages[&quot;Alice&quot;] = 20;
+    ages[&quot;Bruno&quot;] = 30;
+    ages[&quot;Carol&quot;] = 40;
+    ages[&quot;Júlia&quot;] = 50;
+    ages[&quot;Pedro&quot;] = 50;
+
+    // Outputs: &quot;Alice tem 20 anos.&quot;
+    std::cout &lt;&lt; &quot;Alice tem &quot; &lt;&lt; ages[&quot;Alice&quot;] &lt;&lt; &quot; anos.\n&quot;;
+
+    // Outputs: &quot;Pedro tem 50 anos.&quot;
+    std::cout &lt;&lt; &quot;Pedro tem &quot; &lt;&lt; ages[&quot;Pedro&quot;] &lt;&lt; &quot; anos.\n&quot;;
+
+    ages[&quot;Pedro&quot;] = 51;
+    // &quot;Pedro agora tem 51 anos.&quot;
+    std::cout &lt;&lt; &quot;Pedro agora tem &quot; &lt;&lt; ages[&quot;Pedro&quot;] &lt;&lt; &quot; anos.\n&quot;;
+
+
+    return 0;
+}
+</code></pre>
+<p>Para declarar essa estrutura, é necessário explicitar os tipos de dados das chaves e dos valores, com a seguinte sintaxe:</p>
+<pre><code class="language-cpp">std::map&lt;K, V&gt;
+</code></pre>
+<p>Isso representa um <code>map</code> que possui chaves do tipo <code>K</code> e valores do tipo <code>V</code>, no exemplo acima o mapa foi declarado da seguinte forma:</p>
+<pre><code class="language-cpp">std::map&lt;std::string, int&gt; ages;
+</code></pre>
+<p>Nesse caso, <code>K=std::string</code> e <code>V=int</code>, então <code>std::map&lt;std::string, int&gt;</code> mapeia pares de string e inteiros.</p>
+<p>Também é possível iterar em todos os elementos do <code>map</code>:</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;map&gt;
+
+int main()
+{
+    std::map&lt;int, bool&gt; my_map;
+    my_map[3] = true;
+    my_map[7] = false;
+
+    for (auto const&amp; [key, value] : my_map) {
+        std::cout &lt;&lt; key &lt;&lt; &quot;: &quot; &lt;&lt; value &lt;&lt; std::endl;
+    }
+
+    std::cout &lt;&lt; my_map[3] &lt;&lt; std::endl;
+    std::cout &lt;&lt; my_map.at(3) &lt;&lt; std::endl;
+
+    // With [], values will be added if they are not present
+    std::cout &lt;&lt; my_map[9] &lt;&lt; std::endl;
+    // With .at(), will throw exception if value not present
+    std::cout &lt;&lt; my_map.at(8) &lt;&lt; std::endl;
+
+    return 0;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="set"><a class="header" href="#set">Set</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="stdfunction--lambda"><a class="header" href="#stdfunction--lambda">std::function &amp; lambda</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><h1 id="introdução-à-biblioteca-padrão-do-c-1"><a class="header" href="#introdução-à-biblioteca-padrão-do-c-1">Introdução à biblioteca padrão do C++</a></h1>
+<p>A biblioteca padrão do C++ provê algumas funcionalidades básicas para desenvolvimento de software, como strings,
+vetores, listas, tuplas, além de funções utilitárias para lidar com gerenciamento de memória, I/O, sistema de arquivos,
+threads, entre outras. Esse capítulo apresenta uma breve introdução, mostrando algumas das funcionalidades disponíveis
+na biblioteca. Não é necessário baixar nem configurar nada, para utilizar a biblioteca padrão.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="classes-e-objetos"><a class="header" href="#classes-e-objetos">Classes e Objetos</a></h1>
+<p>A base da programação orientada a objetos são os objetos. No contexto de C++ objetos são instâncias de classes, classes são abstrações que contém a descrição de quais atributos e métodos um objeto possui e atributos são variáveis internas de uma classe. Métodos são funções membro (<strong>member functions</strong>) de uma classe. Exemplo:</p>
+<pre><code class="language-c++">#include &lt;iostream&gt;
+
+class Cachorro {
+public:
+    void latir()
+    {
+        std::cout &lt;&lt; &quot;Au! Au!!\n&quot;;
+    }
+};
+
+int main()
+{
+    Cachorro bidu;
+    bidu.latir();
+    return 0;
+}
+</code></pre>
+<p>No código acima, <code>Cachorro</code> é uma classe. O objeto <code>bidu</code> é uma instância da classe <code>Cachorro</code>. Como <code>Cachorro</code> possui o método <code>latir</code>, é possível invoca-lo por meio de <code>bidu.latir()</code>.</p>
+<p>Métodos podem ser públicos (<code>public</code>), protegidos (<code>protected</code>) ou privados (<code>private</code>). Métodos e atributos privados não podem ser invocados fora do escopo da classe. Métodos e atributos protegidos podem ser invocados apenas no escopo da classe ou de classes filhas (Hierarquia de classes é tema do próximo capítulo). Métodos e atributos públicos podem ser acessados de dentro ou de fora do escopo da classe.</p>
+<p>Sugere-se manter os atributos de uma classe como membros privados ou protegidos, e acessa-los apenas através de métodos, a fim de esconder os detalhes do objeto, e expondo apenas alguns métodos públicos. À isso da-se o nome de <strong>encapsulamento</strong>.</p>
+<p>O construtor de uma classe é um método especial que possui o nome igual ao nome da classe e não possui retorno. O construtor da classe serve para inicializar os atributos internos e deixa-la em um estado utilizavel. Exemplo:</p>
+<pre><code class="language-c++">#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+class Cachorro {
+public:
+    Cachorro(std::string const&amp; nome)
+        : nome(nome)
+    {}
+
+    void latir()
+    {
+        std::cout &lt;&lt; &quot;Au! Au!! Eu sou o &quot; &lt;&lt; this-&gt;nome &lt;&lt; '\n';
+    }
+
+private:
+    std::string nome;
+};
+
+int main()
+{
+    Cachorro bidu{&quot;Bidu&quot;};
+    bidu.latir();
+    return 0;
+}
+</code></pre>
+<p>No exemplo acima <code>Cachorro(std::string const&amp; nome)</code> é o construtor da classe <code>Cachorro</code>. Note que o construtor possui um parâmetro do tipo <code>std::string</code>. Dessa forma, para construir um <code>Cachorro</code> agora é necessário passar alguma string como parâmetro. Isso está sendo feito na linha <code>Cachorro bidu{&quot;Bidu&quot;};</code>. Essa linha está construindo uma instância da classe <code>Cachorro</code> de nome <code>bidu</code> e cuja variável interna <code>nome</code> terá o valor <code>Bidu</code>.</p>
+<p>Note a sintaxe de construção do <code>Cachorro</code>:</p>
+<pre><code class="language-c++">    Cachorro(std::string const&amp; nome)
+        : nome(nome)
+    {}
+</code></pre>
+<p>Note que o <code>: nome(nome)</code> está ANTES da abertura do escopo do corpo do construtor, ou seja, antes das chaves <code>{}</code>. Essa sintaxe possibilita que a construção do objeto seja feita antes de entrar no corpo do construtor. Isso se chama lista de inicialização (<strong>initializer list</strong>). Alternativamente poderia-se escrever</p>
+<pre><code class="language-c++">    Cachorro(std::string const&amp; nome)
+    {
+        this-&gt;nome = nome;
+    }
+</code></pre>
+<p>Onde <code>this</code> é uma variável especial que é um ponteiro para a própria instância da classe em questão. O uso de <code>this</code> é
+opcional dentro do escopo da classe, de forma que é possível se referir a atributos da mesma diretamente.
+O código acima altera o valor do membro <code>nome</code> para o valor contido na variável local <code>nome</code>. Diferente do código
+anterior, <code>this-&gt;nome</code> primeiro é inicializado com valor vazio, para somente ser alterado dentro do corpo do construtor
+de <code>Cachorro</code>.</p>
+<p>Assim como qualquer outra variável em C++, instâncias de classes podem ser alocadas na pilha ou na heap. Para alocar uma instância na pilha, basta seguir o procedimento dos exemplos anteriores, copiado abaixo apenas para facilitar a leitura:</p>
+<pre><code class="language-c++">int main()
+{
+    Cachorro bidu{&quot;Bidu&quot;}; // &lt;--- Alocado na pilha
+    bidu.latir();
+    return 0;
+}
+</code></pre>
+<p>Por outro lado, para alocar na heap deve-se fazer uso da palavra reservada <code>new</code>, conforme exemplo abaixo. Tal qual explicado em capítulos anteriores toda memória alocada na heap deve ser desalocada pelo programador. No caso de variáveis inicializadas com <code>new</code> é necessário utilizar o <code>delete</code>.</p>
+<pre><code class="language-c++">int main()
+{
+    auto* bidu = new Cachorro{&quot;Bidu&quot;}; // &lt;--- Alocado na heap
+    bidu-&gt;latir();
+    delete bidu;
+    return 0;
+}
+</code></pre>
+<p>Note que a sintaxe de acesso ao método <code>latir</code> mudou. Isso ocorre por que no exemplo acima <code>bidu</code> é um ponteiro para uma instância de <code>Cachorro</code>. Dessa forma o acesso ao método <code>latir</code> é feito com <code>-&gt;</code> ao invés de <code>.</code>. Alternativamente poderia-se de-referenciar o ponteiro. Porém, a sintaxe ficaria bastante esquisita e não é sugerida:</p>
+<pre><code class="language-c++">int main()
+{
+    auto* bidu = new Cachorro{&quot;Bidu&quot;}; // &lt;--- Alocado na heap
+    (*bidu).latir();
+    delete bidu;
+    return 0;
+}
+</code></pre>
+<p>O objeto <code>bidu</code> será destruído no momento que <code>delete</code> é invocado. No caso da variável em pilha o objeto é destruido no momento que sair do escopo. Em ambos os casos é possível invocar um código especial de destrução do objeto. Esse código fica no método destrutor da classe que possui nome equivalente ao do construtor, porém, com o simbolo <code>~</code> como prefixo. O destrutor é útil quando é necessário liberar algum recurso obtido em algum momento da vida do objeto. Exemplo:</p>
+<pre><code class="language-c++">#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+class Cachorro {
+public:
+    Cachorro(std::string const&amp; nome)
+        : nome(nome)
+    {}
+
+    ~Cachorro()
+    {
+        // Código executado no momento que o cachorro está sendo destruido
+        std::cout &lt;&lt; &quot;Estou sendo destruido!!\n&quot;;
+    }
+
+    void latir()
+    {
+        std::cout &lt;&lt; &quot;Au! Au!! Eu sou o &quot; &lt;&lt; this-&gt;nome &lt;&lt; '\n';
+    }
+
+private:
+    std::string nome;
+};
+
+int main()
+{
+    Cachorro bidu{&quot;Bidu&quot;};
+    bidu.latir();
+    return 0;
+}
+</code></pre>
+<p>Esses são os conceitos básicos de orientação a objetos necessários para iniciar um contato com o tema em linguagem C++. Os capítulos posteriores vão entrar em outros conceitos fundamentais e de extrema importância para a programação orientada a objetos. Por fim, é importante mencionar que programação orientada a objetos é um paradigma muito interessante e pode ajudar na solução de vários problemas. Porém, tenha sempre em mente que não é o único paradigma de programação e que nem sempre é o melhor para qualquer situação.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="herança-e-polimorfismo"><a class="header" href="#herança-e-polimorfismo">Herança e Polimorfismo</a></h1>
+<p>Chama-se <em>herança</em> o mecanismo que permite a uma classe herdar membros (métodos
+e atributos) de outra classe. Tal mecanismo permite reaproveitar código comum entre classes filhas. Porém, uma vantagem
+ainda mais importante é a possibilidade de criar <em>interfaces</em>.</p>
+<p>A sintaxe para a criação de uma classe base é mostrada no exemplo abaixo. A classe <code>ClasseFilha</code> estende a classe
+<code>ClasseMae</code>. Em outras palavras, a classe <code>ClasseFilha</code> é formada por todos os seus atributos e métodos mais todos
+os da classe <code>ClasseMae</code>.</p>
+<pre><code class="language-c++">#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+class ClasseMae {
+public:
+    ClasseMae(int atributo_1)
+        : atributo_1(atributo_1)
+        , atributo_privado('z')
+    {}
+
+    void metodo_1()
+    {
+        std::cout &lt;&lt; &quot;O metodo 1 foi invocado!\n&quot;;
+    }
+
+protected:
+    int atributo_1;
+private:
+    char atributo_privado;
+};
+
+class ClasseFilha : public ClasseMae {
+public:
+    ClasseFilha(int atributo_1, double atributo_2)
+        : ClasseMae(atributo_1)
+        , atributo_2(atributo_2)
+    {}
+
+    void metodo_2()
+    {
+        std::cout &lt;&lt; &quot;O metodo 2 foi invocado!&quot;;
+    }
+
+private:
+    double atributo_2;
+};
+
+int main()
+{
+    ClasseMae objeto_1{1};
+    objeto_1.metodo_1();
+
+    ClasseFilha objeto_2{1, 2.2};
+    objeto_2.metodo_1();
+    objeto_2.metodo_2();
+
+    return 0;
+}
+</code></pre>
+<p>O exemplo é extremamente simples, e serve apenas para ilustrar a sintaxe de herança em C++ e iniciar um contato do leitor
+sobre esses aspectos da linguagem. Note que ambas as instâncias <code>objeto_1</code> e <code>objeto_2</code> podem invocar o método
+<code>metodo_1</code>, e apenas a instância da classe <code>ClasseFilha</code> pode invocar o método <code>metodo_2</code>. Isso ocorre porque <code>objeto_2</code>
+é uma instância da classe <code>ClasseFilha</code>, que possui tanto os métodos e atributos de <code>ClasseMae</code> quanto aqueles
+referentes à própria classe <code>ClasseFilha</code>.</p>
+<p>O construtor da classe <code>ClasseFilha</code> precisa invocar o construtor da classe mãe (<code>ClasseMae</code>) de forma a construir
+corretamente a mesma. A sintaxe para a construção da classe mãe é mostrada no exemplo acima. A classe <code>ClasseFilha</code> possui
+um construtor que contém uma lista de inicialização onde o construtor da classe mãe é invocado. Caso a
+classe mãe não tivesse um construtor definido (se estivesse sendo utilizado o construtor padrão), não seria
+necessário invoca-lo explicitamente como no exemplo acima.</p>
+<p>Além disso, é possível reescrever um método da classe mãe, de forma a alterar seu funcionamento, na classe filha.
+Considere o exemplo abaixo. A classe <code>ClasseMae</code> possui agora um método publico <em>virtual</em> chamado <code>metodo_virtual</code>, e a
+classe <code>ClasseFilha</code> possui um método de mesmo nome com o modificador <code>override</code>. Esse modificador é opcional e está
+disponível apenas em versões mais atuais da linguagem. É uma boa prática de programação adiciona-lo, a fim de manter uma
+consistência entre classe base e classe filha.</p>
+<pre><code class="language-c++">#include &lt;iostream&gt;
+
+class ClasseMae {
+public:
+    virtual void metodo_virtual()
+    {
+        std::cout &lt;&lt; &quot;Comportamento da classe mae.\n&quot;;
+    }
+};
+
+class ClasseFilha : public ClasseMae {
+public:
+    void metodo_virtual() override
+    {
+        std::cout &lt;&lt; &quot;Outro comportamento!!\n&quot;;
+    }
+};
+
+void executar_algoritmo(ClasseMae&amp; objeto)
+{
+    // ... Imagine um algoritmo aqui ...
+    objeto.metodo_virtual();
+}
+
+int main()
+{
+    ClasseMae objeto_1;
+    executar_algoritmo(objeto_1);
+
+    ClasseFilha objeto_2;
+    executar_algoritmo(objeto_2);
+
+    return 0;
+}
+</code></pre>
+<p>Note que a função <code>executar_algoritmo</code> recebe como parâmetro uma referência para um objeto da classe <code>ClasseMae</code>. Ainda assim,
+na função <code>main</code>, uma instância da classe <code>ClasseFilha</code> é enviada como parâmetro. Sempre é possível utilizar instâncias de
+classes filhas como parâmetros para referências ou ponteiros para sua classe mãe. O método <code>executar_algoritmo</code> vai se
+comportar de forma diferente, dependendo do tipo de objeto sendo recebido como parâmetro. Sendo mais específico, para o
+caso do exemplo acima a primeira chamada de <code>executar_algoritmo(objeto_1)</code> resultará no texto escrito
+<code>Comportamento da classe mae.</code>,  enquanto a segunda chamada <code>executar_algoritmo(objeto_2)</code> resultará no texto
+<code>Outro comportamento!!</code>. Essa característica se chama <em>Polimorfismo</em>.</p>
+<p>Um aspecto muito importante de se ter em mente é que no caso da ausência do <code>virtual</code> na classe mãe, o polimorfismo do
+exemplo não acontecerá conforme esperado. Basicamente a ausência de <code>virtual</code> ignora a funcionalidade que possibilita a
+invocação correta do método da classe filha, quando a mesma é passada por parâmetro como uma classe base, como no
+exemplo. Em outras palavras, a remoção de <code>virtual</code> (e por consequência a remoção de <code>override</code>) no exemplo resultaria
+que <strong>as duas</strong> chamadas retornarem o texto <code>Comportamento da classe mae.</code>.</p>
+<p>Uma classe pode possuir métodos virtuais sem implementação, como no próximo exemplo. Classes com pelo menos um método
+virtual sem implementação não podem ser instanciadas. Ou seja, não é possível construir um objeto cujo tipo seja uma
+classe com métodos sem implementação. Classes cujos métodos são todos virtuais e sem implementação são chamadas
+<em>interfaces</em>. Classes que contenham pelo menos um método com implementação são chamadas <em>classes abstratas</em>. Portanto, no
+exemplo abaixo, a classe <code>ClasseInterface</code> é uma interface.</p>
+<pre><code class="language-c++">#include &lt;iostream&gt;
+
+class ClasseInterface {
+public:
+    virtual void metodo_a() = 0;
+};
+
+class ClasseConcreta_A : public ClasseInterface {
+public:
+    void metodo_a() override {
+        std::cout &lt;&lt; &quot;Metodo A invocado pela classe concreta A!\n&quot;;
+    }
+};
+
+class ClasseConcreta_B : public ClasseInterface {
+public:
+    void metodo_a() override {
+        std::cout &lt;&lt; &quot;Metodo A invocado pela classe concreta B!\n&quot;;
+    }
+};
+
+void executar_algoritmo(ClasseInterface&amp; objeto)
+{
+    objeto.metodo_a();
+}
+
+int main()
+{
+    ClasseConcreta_A objeto_1;
+    executar_algoritmo(objeto_1);
+
+    ClasseConcreta_B objeto_2;
+    executar_algoritmo(objeto_2);
+
+    return 0;
+}
+</code></pre>
+<p>Um exemplo prático do uso de polimorfismo é mostrado a seguir. Imagine que tenhamos um sistema com vários elementos
+gráficos: retangulos, circulos, triangulos... Cada estrutura é representada por uma classe com as informações pertinentes.
+Por exemplo:</p>
+<pre><code class="language-c++">class Retangulo {
+private:
+    Vetor posicao;
+    double largura;
+    double altura;
+};
+
+class Circulo {
+private:
+    Vetor posicao;
+    double raio;
+};
+</code></pre>
+<p>Para desenhar um conjunto de elementos gráficos na tela poderíamos ter uma interface em comum para eles, e determinar
+um método para cada classe desenhar-se:</p>
+<pre><code class="language-c++">class ElementoGrafico {
+public:
+    virtual void desenhar() const = 0;
+};
+
+class Retangulo : ElementoGrafico {
+public:
+    void desenhar() const override { /*...*/ }
+/*...*/
+};
+</code></pre>
+<p>Por fim, no programa principal é possível ter um vetor de <code>ElementoGrafico</code>, e considerando que cada um deles sabe se
+desenhar, o código final fica:</p>
+<pre><code class="language-c++">void desenhar_tela(std::vector&lt;std::unique_ptr&lt;ElementoGrafico&gt;&gt; const&amp; elementos)
+{
+    for (auto const&amp; elemento : elementos) {
+        elemento-&gt;desenhar();
+    }
+}
+</code></pre>
+<p>O código completo é apresentado abaixo. O código apresentado é apenas ilustrativo, visto que ele não desenha nada de
+fato na tela, ele apenas escreve textos no terminal.</p>
+<pre><code class="language-c++">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;memory&gt;
+
+struct Vetor {
+    double x;
+    double y;
+};
+
+class ElementoGrafico {
+public:
+    virtual void desenhar() const = 0;
+};
+
+class Retangulo : public ElementoGrafico {
+public:
+    void desenhar() const override
+    {
+        std::cout &lt;&lt; &quot;Desenhando o retangulo!\n&quot;;
+    }
+
+private:
+    Vetor posicao;
+    double largura;
+    double altura;
+};
+
+class Circulo : public ElementoGrafico {
+public:
+    void desenhar() const override
+    {
+        std::cout &lt;&lt; &quot;Desenhando o circulo!\n&quot;;
+    }
+
+private:
+    Vetor posicao;
+    double raio;
+};
+
+void desenhar_tela(std::vector&lt;std::unique_ptr&lt;ElementoGrafico&gt;&gt; const&amp; elementos)
+{
+    for (auto const&amp; elemento : elementos) {
+        elemento-&gt;desenhar();
+    }
+}
+
+int main()
+{
+    auto elementos = std::vector&lt;std::unique_ptr&lt;ElementoGrafico&gt;&gt;{};
+    elementos.push_back(std::make_unique&lt;Circulo&gt;());
+    elementos.push_back(std::make_unique&lt;Retangulo&gt;());
+
+    desenhar_tela(elementos);    
+}
+</code></pre>
+<p>Utiliza-se um <code>std::vector</code> de <code>unique_ptr</code> neste exemplo pois não é possível criar um <code>std::vector&lt;ElementoGrafico&gt;</code> (já que
+trata-se de uma <em>interface</em>) e nem um <code>std::vector&lt;ElementoGrafico&amp;&gt;</code> (já que não é possível criar um <code>vector</code> de referências).
+A última alternativa seria <code>std::vector&lt;ElementoGrafico*&gt;</code>, que funcionaria normalmente, exceto pelo fato de que seria
+necessário fazer o gerenciamento da memória de alguma forma. Para delegar esse gerenciamento, decide-se utilizar os
+<em>smart pointers</em> (nesse caso <code>unique_ptr</code>) de forma a simplificar o código final.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+                        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+                
+    </body>
+</html>
